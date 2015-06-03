@@ -104,7 +104,7 @@ return [
     ],
 
     /*-ptr.nov- : Public Parm FOND AWSOME*/
-    'params' => [ $params,
+    'params' => [ //$params,
         'icon-framework' => 'fa',  // Font Awesome Icon framework
     ],
 
