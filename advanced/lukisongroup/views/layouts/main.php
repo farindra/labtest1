@@ -22,7 +22,8 @@ dmstr\web\AdminLteAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?= 'LG - '.Html::encode($this->title) ?></title>
+    <link rel="shortcut icon" href="<?=LUKISON_IMAGE_PATH.'favicon.ico';?>" type="image/x-icon" />
     <?php $this->head() ?>
 
 </head>
@@ -114,7 +115,7 @@ dmstr\web\AdminLteAsset::register($this);
          </header>
 
         <div class="content-wrapper" >
-            <aside class="main-sidebar">
+            <!--<aside class="main-sidebar">
                 <?php
                     if (!Yii::$app->user->isGuest) {
                         echo SideNav::widget([
@@ -132,7 +133,7 @@ dmstr\web\AdminLteAsset::register($this);
                 <li class="header">
                     testsss
                 </li>
-            </aside>
+            </aside>-->
             <section class="content">
                 <?php echo Breadcrumbs::widget([
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
