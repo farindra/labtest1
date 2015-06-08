@@ -55,6 +55,13 @@ return [
             'password' =>'',
             'charset' => 'utf8',
         ],
+		'db5' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=dbc001',
+            'username' => 'root',
+            'password' =>'',
+            'charset' => 'utf8',
+        ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',

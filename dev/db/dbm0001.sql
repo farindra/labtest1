@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : phpmyadmin
-Source Server Version : 50620
-Source Host           : localhost:3306
+Source Server         : ServerLinux
+Source Server Version : 50541
+Source Host           : 10.10.99.3:3306
 Source Database       : dbm0001
 
 Target Server Type    : MYSQL
-Target Server Version : 50620
+Target Server Version : 50541
 File Encoding         : 65001
 
-Date: 2015-06-08 19:00:00
+Date: 2015-06-03 16:57:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -62,7 +62,7 @@ CREATE TABLE `auth_item` (
   `created_at` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL,
   PRIMARY KEY (`name`),
-  KEY `rule_name` (`rule_name`) USING BTREE,
+  KEY `rule_name` (`rule_name`),
   CONSTRAINT `auth_item_ibfk_1` FOREIGN KEY (`rule_name`) REFERENCES `auth_rule` (`name`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -130,7 +130,6 @@ INSERT INTO `auth_item` VALUES ('/Itlogerror/index', '2', null, null, null, '143
 INSERT INTO `auth_item` VALUES ('/Itnetwork/index', '2', null, null, null, '1432809743', '1432809743');
 INSERT INTO `auth_item` VALUES ('/itprogramer/index', '2', null, null, null, '1433302248', '1433302248');
 INSERT INTO `auth_item` VALUES ('/Itsupport/index', '2', null, null, null, '1432809756', '1432809756');
-INSERT INTO `auth_item` VALUES ('/sss/a1000', '2', null, null, null, '1433747457', '1433747457');
 INSERT INTO `auth_item` VALUES ('/ssskonsumen/index', '2', null, null, null, '1432665390', '1432665390');
 INSERT INTO `auth_item` VALUES ('/sssmarketing/index', '2', null, null, null, '1432665448', '1432665448');
 INSERT INTO `auth_item` VALUES ('/sssprodak/index', '2', null, null, null, '1432665346', '1432665346');
@@ -207,7 +206,7 @@ CREATE TABLE `auth_item_child` (
   `parent` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `child` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`parent`,`child`),
-  KEY `child` (`child`) USING BTREE,
+  KEY `child` (`child`),
   CONSTRAINT `auth_item_child_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `auth_item_child_ibfk_2` FOREIGN KEY (`child`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -274,7 +273,6 @@ INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itlogerror/index')
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itnetwork/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/itprogramer/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itsupport/index');
-INSERT INTO `auth_item_child` VALUES ('DEFAULT_MENU', '/sss/a1000');
 INSERT INTO `auth_item_child` VALUES ('Permission_SSS_Full', '/ssskonsumen/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_SSS_Full', '/sssmarketing/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_SSS_Full', '/sssprodak/index');
@@ -402,7 +400,7 @@ INSERT INTO `menu` VALUES ('82', 'Inventaris', '72', '/gainventaris/index', '1',
 INSERT INTO `menu` VALUES ('83', 'Maintenance', '72', '/gaimaintenance/index', '2', null);
 INSERT INTO `menu` VALUES ('84', 'MESSAGE', null, null, '2', null);
 INSERT INTO `menu` VALUES ('85', 'Chat', '84', '/chating/index', '1', null);
-INSERT INTO `menu` VALUES ('86', 'Berita Acara', '84', '/sss/a1000', '2', null);
+INSERT INTO `menu` VALUES ('86', 'Berita Acara', '84', '/bt/index', '2', null);
 INSERT INTO `menu` VALUES ('87', 'General', '30', '/dashboarda/index', '1', null);
 INSERT INTO `menu` VALUES ('88', 'Matrial Promotion', '73', '/desmatrial/index', '1', null);
 INSERT INTO `menu` VALUES ('89', 'Draff Design', '73', '/desdraff/index', '2', null);
