@@ -59,6 +59,7 @@ dmstr\web\AdminLteAsset::register($this);
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ];
+
             }
 
             $footerStart ="<footer class='footer'>";
@@ -140,8 +141,9 @@ dmstr\web\AdminLteAsset::register($this);
                 ]);
                 ?>
                 <?= Alert::widget() ?>
-                <?php echo $content; ?>
+                <?php echo $content;// echo print_r($menuItems,true); ?>
             </section>
+
         </div>
 
         <footer class="main-footer">

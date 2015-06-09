@@ -2,6 +2,7 @@
 namespace lukisongroup\assets;
 
 use yii\web\AssetBundle;
+use yii\web\View;
 
 /**
  * @author maseka
@@ -15,7 +16,10 @@ class SssAsset extends AssetBundle
       //  'assets_sss/css/site.css',
     ];
     public $js = [
-        //  'assets_sss/js/site.css',
+        'assets_sss/js/angular.min.js',
+    ];
+    public $jsOptions = [
+        'position' => View::POS_HEAD,
     ];
     public $depends = [
        // 'yii\web\YiiAsset',

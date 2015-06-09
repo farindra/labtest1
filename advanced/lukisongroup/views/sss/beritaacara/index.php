@@ -1,9 +1,22 @@
 <?php
 /* @var $this yii\web\View */
-?>
-<h1>beritaacara/index</h1>
+use lukisongroup\assets\SssAsset;
 
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+SssAsset::register($this);
+?>
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div ng-app="">
+
+    <p>Input something in the input box:</p>
+    <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+    <h1>Hello {{name}}</h1>
+
+</div>
+
+</body>
+</html>
+
