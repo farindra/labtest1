@@ -1,5 +1,4 @@
 <?php
-use lukisongroup\assets\AppAsset;
 use mdm\admin\components\MenuHelper;
 use yii\helpers\Html;
 /*use yii\bootstrap\Nav;*/
@@ -12,7 +11,6 @@ use dmstr\widgets\Alert;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-//AppAsset::register($this);
 dmstr\web\AdminLteAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -22,8 +20,12 @@ dmstr\web\AdminLteAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= 'LG - '.Html::encode($this->title) ?></title>
-    <link rel="shortcut icon" href="<?=LUKISON_IMAGE_PATH.'favicon.ico';?>" type="image/x-icon" />
+
+    <!-- sss -->
+        <title><?= 'LG - '.Html::encode($this->title) ?></title>
+        <link rel="shortcut icon" href="<?=LUKISON_IMAGE_PATH.'favicon.ico';?>" type="image/x-icon" />
+    <!-- /sss -->
+
     <?php $this->head() ?>
 
 </head>
@@ -53,7 +55,7 @@ dmstr\web\AdminLteAsset::register($this);
                 $menuItems[] = ['label' => Icon::show('gears') .'Login', 'url' => ['/site/login']];
             } else {
                 //$menuItems  = MenuHelper::getAssignedMenu(Yii::$app->user->id);
-                $menuItems = MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback);
+                $menuItems = MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback);//echo print_r($menuItems,true);
                 $menuItems[] = [
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],

@@ -1,18 +1,78 @@
 <?php
 /* @var $this yii\web\View */
 use lukisongroup\assets\SssAsset;
+use kartik\sidenav\SideNav;
+use kartik\icons\Icon;
 
+//$side_menu[]=['label' => Icon::show('gears') .'Login', 'url' => ['/site/login']];
+$side_menu='[{"label":"New","url":["\nnew"]},{"label":"PM","url":["\new"]},{"label":"Inbox","url":["\new"]},{"label":"Sent","url":["\new"]},{"label":"Draft","url":["\new"]}]';
+$side_menu=json_decode($side_menu,true);
+
+//$side_menu=json_decode('[{"label":"New"}]');
+$this->title = 'Berita Acara';
+$this->params['breadcrumbs'][] = $this->title;
 SssAsset::register($this);
+
 ?>
+
 <!DOCTYPE html>
 <html>
-
 <body ng-app="myApp" ng-controller="userCtrl">
 
+<?//=print_r($side_menu,true);?>
+
+    <h3>Berita Acara</h3>
+    <aside class="main-sidebar">
+        <?php
+        if (!Yii::$app->user->isGuest) {
+            echo SideNav::widget([
+                'items' => $side_menu,
+                'encodeLabels' => false,
+                //'heading' => $heading,
+                'type' => SideNav::TYPE_DEFAULT,
+                'options' => ['class' => 'sidebar-nav'],
+            ]);
+        };
+        ?>
+
+    </aside>
+
+
 <div class="container">
+    <div class="col-md-8">
+        Tester
+    </div>
+    <div class="col-md-4">
+        div 12
+    </div>
 
-    <h3>Users</h3>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---
     <table class="table table-striped">
         <thead>
         <tr>
@@ -78,7 +138,7 @@ SssAsset::register($this);
 </div>
 
 <script src= "<?=LUKISON_JS_PATH.'myUsers.js' ?>"></script>
-
+-->
 </body>
 </html>
 
