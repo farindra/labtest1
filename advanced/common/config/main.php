@@ -33,29 +33,26 @@ return [
         ],
         'db2' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbc002',
+            'dsn' => 'mysql:host=localhost;dbname=dbm0002',
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',
         ],
         'db3' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=lg_esm',
+            'dsn' => 'mysql:host=localhost;dbname=dbm0003',
             'username' => 'root',
             'password' =>'',
-            //'dsn' => 'oci:dbname=//10.10.99.3:1521/gosent',
-            //'username' => 'gosent',
-            //'password' => 'asd123',
             'charset' => 'utf8',
         ],
 		'db4' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=api',
+            'dsn' => 'mysql:host=localhost;dbname=dbm0004',
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',
         ],
-		'db5' => [
+		'db_sss' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=dbc001',
             'username' => 'root',

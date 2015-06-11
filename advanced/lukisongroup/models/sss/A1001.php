@@ -31,7 +31,7 @@ class A1001 extends \yii\db\ActiveRecord
      */
     public static function getDb()
     {
-        return Yii::$app->get('db5');
+        return Yii::$app->get('db_sss');
     }
 
     /**

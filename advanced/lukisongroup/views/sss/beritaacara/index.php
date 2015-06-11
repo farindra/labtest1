@@ -39,10 +39,10 @@ SssAsset::register($this);
 
 
 <div class="container">
-    <div class="col-md-8">
+    <div class="col-md-12">
         Tester
     </div>
-    <div class="col-md-4">
+    <div class="col-md-12">
         div 12
     </div>
 
