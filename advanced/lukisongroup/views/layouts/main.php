@@ -21,9 +21,9 @@ dmstr\web\AdminLteAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
 
-    <!-- sss -->
+    <!-- sss maseka -->
         <title><?= 'LG - '.Html::encode($this->title) ?></title>
-        <link rel="shortcut icon" href="<?=LUKISON_IMAGE_PATH.'favicon.ico';?>" type="image/x-icon" />
+        <link rel="shortcut icon" href="<?=SSS_IMAGE_PATH.'favicon.ico';?>" type="image/x-icon" />
     <!-- /sss -->
 
     <?php $this->head() ?>

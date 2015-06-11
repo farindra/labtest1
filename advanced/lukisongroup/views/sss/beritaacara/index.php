@@ -137,7 +137,7 @@ SssAsset::register($this);
 
 </div>
 
-<script src= "<?=LUKISON_JS_PATH.'myUsers.js' ?>"></script>
+<script src= "<?=SSS_JS_PATH.'myUsers.js' ?>"></script>
 -->
 </body>
 </html>
