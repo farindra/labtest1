@@ -32,4 +32,11 @@ class M1000Query extends \yii\db\ActiveQuery
     {
         return parent::one($db);
     }
+
+    public function findMenu($kdmenu)
+    {
+        $this->where(['=','kd_menu', $kdmenu]);
+
+        return $this;
+    }
 }

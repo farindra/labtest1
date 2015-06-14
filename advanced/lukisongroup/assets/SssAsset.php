@@ -19,7 +19,7 @@ class SssAsset extends AssetBundle
         'assets_sss/js/angular.min.js',
     ];
     public $jsOptions = [
-        'position' => View::POS_HEAD,
+        'position' => View::POS_END,
     ];
     public $depends = [
        // 'yii\web\YiiAsset',

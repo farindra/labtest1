@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\checkbox\CheckboxX;
 
 /* @var $this yii\web\View */
 /* @var $model lukisongroup\models\system\M1000 */
@@ -12,7 +13,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'kd_menu')->textInput(['maxlength' => true])->label('Kode Menu') ?>
+    <?= $form->field($model, 'kd_menu')->textInput(['maxlength' => true,'placeholder'=>SSS_CORP_ID.'_'])->label('Kode Menu') ?>
 
     <?= $form->field($model, 'nm_menu')->textInput(['maxlength' => true])->label('Nama Menu') ?>
 
@@ -20,7 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'note')->textarea(['rows' => 6])->label('Keterangan') ?>
 
-    <?= $form->field($model, 'status')->checkbox()->label('ee') ?>
+    <?= $form->field($model, 'status')->widget(CheckboxX::classname(), ['pluginOptions'=>['threeState'=>false]])->label('Aktif');  ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

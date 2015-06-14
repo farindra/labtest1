@@ -4,12 +4,6 @@ use lukisongroup\assets\SssAsset;
 use kartik\sidenav\SideNav;
 use kartik\icons\Icon;
 
-
-//$side_menu[]=['label' => Icon::show('gears') .'Login', 'url' => ['/site/login']];
-$side_menu='[{"label":"<i class=\"fa fa-pencil\"></i> New","url":["new"]},{"label":"<i class=\"fa fa-suitcase\"></i> PM <span id=\"menu-badge-1\" class=\"badge badge-purple\" style=\"float: right\"></span>","url":["pm"]},{"label":"<i class=\"fa fa-inbox\"></i> Inbox","url":["inbox"]},{"label":"<i class=\"fa fa-send\"></i> Sent","url":["sent"]},{"label":"<i class=\"fa fa-folder-o\"></i> Draft","url":["draft"]}]';
-$side_menu=json_decode($side_menu,true);
-
-//$side_menu=json_decode('[{"label":"New"}]');
 $this->title = 'New';
 $this->params['breadcrumbs'][] = ['label' => 'Berita Acara', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;

@@ -58,16 +58,16 @@ class M1000 extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'kd_menu' => 'Kd Menu',
-            'nm_menu' => 'Nm Menu',
-            'jval' => 'Jval',
-            'note' => 'Note',
-            'created_by' => 'Created By',
-            'created_at' => 'Created At',
-            'updated_by' => 'Updated By',
-            'updated_at' => 'Updated At',
-            'status' => 'Status',
+            'id' => Yii::t('M1000', 'ID'),
+            'kd_menu' => Yii::t('M1000', 'Kd Menu'),
+            'nm_menu' => Yii::t('M1000', 'Nm Menu'),
+            'jval' => Yii::t('M1000', 'Jval'),
+            'note' => Yii::t('M1000', 'Note'),
+            'created_by' => Yii::t('M1000', 'Created By'),
+            'created_at' => Yii::t('M1000', 'Created At'),
+            'updated_by' => Yii::t('M1000', 'Updated By'),
+            'updated_at' => Yii::t('M1000', 'Updated At'),
+            'status' => Yii::t('M1000', 'Status'),
         ];
     }
 
