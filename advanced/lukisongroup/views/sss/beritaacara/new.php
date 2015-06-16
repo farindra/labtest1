@@ -2,7 +2,7 @@
 /* @var $this yii\web\View */
 use lukisongroup\assets\SssAsset;
 use kartik\sidenav\SideNav;
-use kartik\icons\Icon;
+use yii\helpers\Html;
 
 $this->title = 'New';
 $this->params['breadcrumbs'][] = ['label' => 'Berita Acara', 'url' => ['index']];
@@ -11,9 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<body ng-app="myApp" ng-controller="userCtrl">
+
 <div class="container">
 <?//=Icon::show('gears')//=print_r($side_menu,true);?>
 
@@ -32,34 +30,15 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
     </aside>
 
-    <div class="container">
-        <div class="jumbotron">
-            <h1>My First Bootstrap Page</h1>
-            <p>Resize this responsive page to see the effect!</p>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-        </div>
+    <div class="a1000-create">
+
+      <?= $this->render('_form', [
+            'model' => $model,'model2' => $model2
+        ]) ?>
+
     </div>
 
+
 </div>
-
-
-</body>
-</html>
 
 

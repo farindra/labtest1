@@ -4,6 +4,7 @@ namespace lukisongroup\controllers\sss;
 
 use Yii;
 use app\models\sss\A1000;
+use app\models\sss\A1001;
 use app\models\sss\A1000Search;
 use lukisongroup\models\system\M1000;
 use yii\web\Controller;
@@ -39,8 +40,15 @@ class BeritaacaraController extends Controller
         //set menu side menu index
         $side_menu=M1000::find()->findMenu('sss_berita_acara')->one()->jval;
         $side_menu=json_decode($side_menu,true);
+        $model = new A1000();$model2 = new A1001;
 
-        return $this->render('new',['side_menu'=>$side_menu]);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id, 'kd_berita' => $model->kd_berita]);
+        } else {
+            return $this->render('new',['side_menu'=>$side_menu,'model' => $model,'model2' => $model2
+            ]);
+        }
+
     }
 
     protected function findModel($id, $kd_menu)
