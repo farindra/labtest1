@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : ServerLinux
-Source Server Version : 50541
-Source Host           : 10.10.99.3:3306
+Source Server         : phpmyadmin
+Source Server Version : 50620
+Source Host           : localhost:3306
 Source Database       : dbc002
 
 Target Server Type    : MYSQL
-Target Server Version : 50541
+Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2015-06-03 16:56:50
+Date: 2015-06-15 17:35:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -163,6 +163,20 @@ INSERT INTO `d0001` VALUES ('1', 'PONDOK CITRA BAKERY', '2', '000017', '1', '1',
 INSERT INTO `d0001` VALUES ('M00337', 'PONDOK CITRA BAKERY', '1', '000017', '1', '1', '2015-03-01', 'DWIDJA PRANATA', '59402076', 'CITRARAYA BLOK D1 NO.21R', '9402076', '9402076');
 
 -- ----------------------------
+-- Table structure for `taa_sales`
+-- ----------------------------
+DROP TABLE IF EXISTS `taa_sales`;
+CREATE TABLE `taa_sales` (
+  `SL_DTL_ID` varchar(20) NOT NULL DEFAULT '',
+  `SL_ID` varchar(20) NOT NULL,
+  PRIMARY KEY (`SL_DTL_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of taa_sales
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `ta_sales`
 -- ----------------------------
 DROP TABLE IF EXISTS `ta_sales`;
@@ -172,32 +186,6 @@ CREATE TABLE `ta_sales` (
 
 -- ----------------------------
 -- Records of ta_sales
--- ----------------------------
-
--- ----------------------------
--- Table structure for `taa_sales`
--- ----------------------------
-DROP TABLE IF EXISTS `taa_sales`;
-CREATE TABLE `taa_sales` (
-  `SL_DTL_ID` varchar(20) NOT NULL DEFAULT '',
-  `SL_ID` varchar(20) NOT NULL,
-  PRIMARY KEY (`SL_DTL_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
-
--- ----------------------------
--- Records of taa_sales
--- ----------------------------
-
--- ----------------------------
--- Table structure for `tb_po`
--- ----------------------------
-DROP TABLE IF EXISTS `tb_po`;
-CREATE TABLE `tb_po` (
-  `SL_ID` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of tb_po
 -- ----------------------------
 
 -- ----------------------------
@@ -213,15 +201,15 @@ CREATE TABLE `tba_po` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `tc_inv`
+-- Table structure for `tb_po`
 -- ----------------------------
-DROP TABLE IF EXISTS `tc_inv`;
-CREATE TABLE `tc_inv` (
+DROP TABLE IF EXISTS `tb_po`;
+CREATE TABLE `tb_po` (
   `SL_ID` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of tc_inv
+-- Records of tb_po
 -- ----------------------------
 
 -- ----------------------------
@@ -234,4 +222,16 @@ CREATE TABLE `tca_inv` (
 
 -- ----------------------------
 -- Records of tca_inv
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `tc_inv`
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_inv`;
+CREATE TABLE `tc_inv` (
+  `SL_ID` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of tc_inv
 -- ----------------------------

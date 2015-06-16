@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : phpmyadmin
-Source Server Version : 50540
+Source Server Version : 50620
 Source Host           : localhost:3306
 Source Database       : dbc001
 
 Target Server Type    : MYSQL
-Target Server Version : 50540
+Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2015-06-10 06:17:56
+Date: 2015-06-15 17:34:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -47,6 +47,7 @@ CREATE TABLE `a1000` (
   `created_by` varchar(100) DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `data_all` longtext,
+  `menu` longtext,
   PRIMARY KEY (`id`,`kd_berita`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -67,7 +68,7 @@ CREATE TABLE `a1001` (
   `created_by` varchar(100) DEFAULT NULL,
   `created_at` date DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`,`kd_berita`,`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -87,7 +88,7 @@ CREATE TABLE `a1002` (
   `created_by` varchar(100) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`,`kd_berita`,`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -106,36 +107,6 @@ CREATE TABLE `b------` (
 -- ----------------------------
 -- Records of b------
 -- ----------------------------
-
--- ----------------------------
--- Table structure for `m------`
--- ----------------------------
-DROP TABLE IF EXISTS `m------`;
-CREATE TABLE `m------` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of m------
--- ----------------------------
-
--- ----------------------------
--- Table structure for `migration`
--- ----------------------------
-DROP TABLE IF EXISTS `migration`;
-CREATE TABLE `migration` (
-  `version` varchar(180) NOT NULL,
-  `apply_time` int(11) DEFAULT NULL,
-  PRIMARY KEY (`version`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of migration
--- ----------------------------
-INSERT INTO `migration` VALUES ('m000000_000000_base', '1433889914');
-INSERT INTO `migration` VALUES ('m130524_201442_init', '1433889925');
-INSERT INTO `migration` VALUES ('m150609_225323_sss', '1433891169');
 
 -- ----------------------------
 -- Table structure for `r------`

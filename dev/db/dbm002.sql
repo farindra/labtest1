@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : phpmyadmin
 Source Server Version : 50620
 Source Host           : localhost:3306
-Source Database       : dbm0002
+Source Database       : dbm002
 
 Target Server Type    : MYSQL
 Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2015-06-15 15:50:46
+Date: 2015-06-15 17:35:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
