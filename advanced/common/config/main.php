@@ -47,7 +47,11 @@ return [
         ],
 		'db4' => [
             'class' => 'yii\db\Connection',
+<<<<<<< HEAD
+            'dsn' => 'mysql:host=localhost;dbname=dbm000',
+=======
             'dsn' => 'mysql:host=localhost;dbname=dbm004',
+>>>>>>> master
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',
@@ -55,6 +59,13 @@ return [
 		'db_sss' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=dbc001',
+            'username' => 'root',
+            'password' =>'',
+            'charset' => 'utf8',
+        ],
+        'db_esm' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=dbc002',
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',

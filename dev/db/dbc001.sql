@@ -10,7 +10,11 @@ Target Server Type    : MYSQL
 Target Server Version : 50620
 File Encoding         : 65001
 
+<<<<<<< HEAD
+Date: 2015-06-17 05:22:06
+=======
 Date: 2015-06-15 17:34:55
+>>>>>>> master
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,6 +33,14 @@ CREATE TABLE `a------` (
 -- ----------------------------
 
 -- ----------------------------
+<<<<<<< HEAD
+-- Table structure for `b------`
+-- ----------------------------
+DROP TABLE IF EXISTS `b------`;
+CREATE TABLE `b------` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+=======
 -- Table structure for `a1000`
 -- ----------------------------
 DROP TABLE IF EXISTS `a1000`;
@@ -89,23 +101,24 @@ CREATE TABLE `a1002` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`,`kd_berita`,`id_user`)
+>>>>>>> master
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of a1002
+-- Records of b------
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `b------`
+-- Table structure for `c------`
 -- ----------------------------
-DROP TABLE IF EXISTS `b------`;
-CREATE TABLE `b------` (
+DROP TABLE IF EXISTS `c------`;
+CREATE TABLE `c------` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of b------
+-- Records of c------
 -- ----------------------------
 
 -- ----------------------------

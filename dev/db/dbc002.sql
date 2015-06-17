@@ -2,163 +2,152 @@
 Navicat MySQL Data Transfer
 
 Source Server         : phpmyadmin
+<<<<<<< HEAD
+Source Server Version : 50540
+=======
 Source Server Version : 50620
+>>>>>>> master
 Source Host           : localhost:3306
 Source Database       : dbc002
 
 Target Server Type    : MYSQL
+<<<<<<< HEAD
+Target Server Version : 50540
+File Encoding         : 65001
+
+Date: 2015-06-17 05:22:16
+=======
 Target Server Version : 50620
 File Encoding         : 65001
 
 Date: 2015-06-15 17:35:17
+>>>>>>> master
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for `a0001`
--- ----------------------------
-DROP TABLE IF EXISTS `a0001`;
-CREATE TABLE `a0001` (
-  `DBTR_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `DBTR_NM` varchar(30) DEFAULT NULL,
-  `DBTR_STT` smallint(6) DEFAULT NULL,
-  `DBTR_JOIN` date DEFAULT NULL,
-  `DBTR_PIC` varchar(30) DEFAULT NULL,
-  `DBTR_ALMT` text,
-  `DBTR_ID_TLP` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`DBTR_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COMMENT='DISTRIBUTIR MAXI';
-
--- ----------------------------
--- Records of a0001
--- ----------------------------
-INSERT INTO `a0001` VALUES ('1', 'ESM', '1', '2013-01-01', 'Stephen', 'Ruko Demension', null);
-INSERT INTO `a0001` VALUES ('2', ' PT. CAHAYA INTI PUTRA SEJAHTE', '1', '2015-02-01', 'Atun', 'P.Gadung', null);
-INSERT INTO `a0001` VALUES ('3', 'as', '1', '2015-05-26', 'as', 'asd', '12');
-INSERT INTO `a0001` VALUES ('4', 'coba ya', '1', '2015-05-26', 'testing', 'hahahi', '123124123123');
-INSERT INTO `a0001` VALUES ('6', 'adw', '1', '2015-05-27', 'awd', 'awdawd', '123');
 
 -- ----------------------------
 -- Table structure for `b0001`
 -- ----------------------------
 DROP TABLE IF EXISTS `b0001`;
 CREATE TABLE `b0001` (
-  `BRG_ID` varchar(10) NOT NULL,
-  `BRG_CONV` smallint(6) DEFAULT NULL,
-  `BRG_NM` varchar(30) DEFAULT NULL,
-  `DBTR_ID` int(11) DEFAULT NULL,
-  `PRIZE_ID` int(11) DEFAULT NULL,
-  `BRG_STT` smallint(6) NOT NULL DEFAULT '0',
-  `BRG_JOIN` date DEFAULT NULL,
-  `BRG_DCRIP` text,
-  PRIMARY KEY (`BRG_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Prodak Maxi';
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Tabel Barang',
+  `kdBrg` varchar(50) NOT NULL,
+  `nmBrg` varchar(255) NOT NULL,
+  `kdUnit` int(11) NOT NULL,
+  `kdSuplier` varchar(50) NOT NULL,
+  `kdDbtr` varchar(50) NOT NULL,
+  `hpp` bigint(20) NOT NULL,
+  `harga` int(11) NOT NULL,
+  `barcode` int(11) NOT NULL,
+  `note` text NOT NULL,
+  `status` int(11) NOT NULL,
+  `createdBy` varchar(255) NOT NULL,
+  `createdAt` varchar(255) NOT NULL,
+  `updateAt` varchar(255) NOT NULL,
+  `data_all` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1 COMMENT='Table Barang';
 
 -- ----------------------------
 -- Records of b0001
 -- ----------------------------
-INSERT INTO `b0001` VALUES ('EF001', '0', 'CASSAVA CRACKER HOT ', '2', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('EF002', '1', 'CASSAVA BALADO', '2', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('EF003', '2', 'TARO ROASTED CORN', '2', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('EF004', '3', 'TARO BLACK PEPPER', '2', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('EF005', '4', 'MIXED ROOTS', '2', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('MAX001', '0', 'CASSAVA CRACKER HOT ', '1', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('MAX002', '1', 'CASSAVA BALADO', '1', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('MAX003', '2', 'TARO ROASTED CORN', '1', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('MAX004', '3', 'TARO BLACK PEPPER', '1', null, '1', '2014-01-01', null);
-INSERT INTO `b0001` VALUES ('MAX005', '4', 'MIXED ROOTS', '1', null, '1', '2014-01-01', null);
+INSERT INTO `b0001` VALUES ('1', '213adaw', 'EF003', '2', '', 'KD004', '123123', '123123', '7654', 'adwdaw', '1', '0', '0', 'admin', '');
+INSERT INTO `b0001` VALUES ('2', '213adaw', 'EF001', '1', 'awdadaw', 'KD001', '123123', '123123', '12321321', 'adwdaw', '1', '0', '0', 'admin', '');
+INSERT INTO `b0001` VALUES ('3', 'awdawdaw', 'EF004', '3', 'AWD', 'awd', '456', '123345', '123', 'awdawd', '0', '0', '0', 'admin', '');
+INSERT INTO `b0001` VALUES ('4', '11a', 'EF003', '2', 'asdf', '2e', '2678', '56224', '89077', 'rth', '0', '0', '0', 'admin', '');
+INSERT INTO `b0001` VALUES ('5', 'awd', 'awd', '1', 'AWd', 'adw', '123', '213', '1232', 'awdawd', '0', 'admin', '0', 'admin', '');
+INSERT INTO `b0001` VALUES ('6', 'MAX0012', 'EF001', '2', '', '2e', '2345', '41085', '45052', 'dfghj', '1', 'admin', '', 'admin', '');
+INSERT INTO `b0001` VALUES ('7', 'awdwa', 'dawdawd', '3', '', '', '123', '345', '123', 'adw', '0', 'admin', '', '', '');
+INSERT INTO `b0001` VALUES ('8', 'awd', 'awd', '4', 'aw', 'dawd', '123', '234', '56', 'awd', '1', 'admin', '', '', '');
+INSERT INTO `b0001` VALUES ('9', 'awdawd', '21adw', '2', 'awdzxc', 'awd', '1443', '564', '345345', 'zcs', '1', 'admin', '', 'admin', '');
+INSERT INTO `b0001` VALUES ('10', 'awdadw123', 'awd', '3', 'awd', 'wad', '213', '234', '5435', 'none', '1', 'admin', '', '', '');
+INSERT INTO `b0001` VALUES ('11', 'dadwd', 'EF003', '3', '', 'dwaawd', '13245465', '786', '23456', 'sdvbn', '1', 'admin', '', '', '');
+INSERT INTO `b0001` VALUES ('12', 'Brg0220', 'EF002', '2', '', 'KD004', '123', '234', '563', '123', '0', 'admin', '', '', '');
 
 -- ----------------------------
--- Table structure for `ba0001`
+-- Table structure for `b0002`
 -- ----------------------------
-DROP TABLE IF EXISTS `ba0001`;
-CREATE TABLE `ba0001` (
-  `UNIT_ID` int(11) NOT NULL,
-  `UNIT_NM` varchar(20) NOT NULL,
-  `BRG_ID` varchar(10) NOT NULL,
-  `PRIZE_ID` int(11) DEFAULT NULL,
-  `UNIT_STT` smallint(6) NOT NULL DEFAULT '0',
-  `UNIT_PCS` float DEFAULT NULL,
-  `UNIT_PACK` int(11) DEFAULT NULL,
-  PRIMARY KEY (`UNIT_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='UNIT';
+DROP TABLE IF EXISTS `b0002`;
+CREATE TABLE `b0002` (
+  `idBarang` int(11) NOT NULL AUTO_INCREMENT,
+  `kodeBarang` varchar(255) NOT NULL,
+  `namaBarang` varchar(255) NOT NULL,
+  `kdSuplier` varchar(50) NOT NULL,
+  PRIMARY KEY (`idBarang`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COMMENT='Barang Maxi';
 
 -- ----------------------------
--- Records of ba0001
+-- Records of b0002
 -- ----------------------------
-
--- ----------------------------
--- Table structure for `bb0001`
--- ----------------------------
-DROP TABLE IF EXISTS `bb0001`;
-CREATE TABLE `bb0001` (
-  `PRIZE_ID` varchar(255) NOT NULL,
-  `BRG_ID` varchar(10) NOT NULL,
-  `DBTR_ID` int(11) NOT NULL,
-  `PRIZE_BASE` float(50,2) NOT NULL DEFAULT '0.00',
-  `PRIZE_UP` float(50,2) NOT NULL DEFAULT '0.00',
-  `PRIZE_STT` smallint(6) NOT NULL DEFAULT '0',
-  `PRIZE_DATE` date DEFAULT NULL,
-  `PRIZE_DCRIP` text,
-  PRIMARY KEY (`PRIZE_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Price List';
-
--- ----------------------------
--- Records of bb0001
--- ----------------------------
-
--- ----------------------------
--- Table structure for `c0001`
--- ----------------------------
-DROP TABLE IF EXISTS `c0001`;
-CREATE TABLE `c0001` (
-  `SELES_ID` varchar(10) NOT NULL,
-  `SELES_NM` varchar(30) DEFAULT NULL,
-  `SELES_STS` smallint(6) DEFAULT NULL,
-  `DBTR_ID` int(11) DEFAULT NULL,
-  `SELES_ALMT` text,
-  `SELES_TLP` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`SELES_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of c0001
--- ----------------------------
-INSERT INTO `c0001` VALUES ('000017', 'ADI', '1', '2', null, null);
-INSERT INTO `c0001` VALUES ('000023', 'RONY', '1', '2', null, null);
-INSERT INTO `c0001` VALUES ('1', 'ADI', '1', '1', null, null);
-INSERT INTO `c0001` VALUES ('2', 'RONY', '1', '1', null, null);
-INSERT INTO `c0001` VALUES ('3', 'JAYA', '1', '1', null, null);
-INSERT INTO `c0001` VALUES ('4', 'HANDA', '1', '1', null, null);
-INSERT INTO `c0001` VALUES ('5', 'SAMUEL', '1', '1', null, null);
-INSERT INTO `c0001` VALUES ('X00001 ', 'JAYA', '1', '2', null, null);
-INSERT INTO `c0001` VALUES ('X00002 ', 'HANDA', '1', '2', null, null);
-INSERT INTO `c0001` VALUES ('X00003', 'SAMUEL', '1', '2', null, null);
+INSERT INTO `b0002` VALUES ('1', 'EF001', 'Cassava Cracker Hot', '');
+INSERT INTO `b0002` VALUES ('2', 'EF002', 'Cassava Balado', '');
+INSERT INTO `b0002` VALUES ('3', 'EF003', 'Taro Roasted Corn', '');
+INSERT INTO `b0002` VALUES ('4', 'EF004', 'Taro Black Pepper', '');
+INSERT INTO `b0002` VALUES ('5', 'EF005', 'Mixed Roots', '');
 
 -- ----------------------------
 -- Table structure for `d0001`
 -- ----------------------------
 DROP TABLE IF EXISTS `d0001`;
 CREATE TABLE `d0001` (
-  `CUST_ID` varchar(10) NOT NULL,
-  `CUST_NM` varchar(30) DEFAULT NULL,
-  `DBTR_ID` varchar(10) NOT NULL,
-  `SELES_ID` varchar(10) NOT NULL,
-  `DBTR_REF` varchar(10) NOT NULL,
-  `CUST_STT` smallint(6) NOT NULL DEFAULT '0',
-  `CUST_JOIN` date DEFAULT NULL,
-  `CUST_PIC` varchar(30) DEFAULT NULL,
-  `CUST_PHONE` varchar(20) DEFAULT NULL,
-  `CUST_ALMT` text,
-  `CUST_TLP` varchar(20) DEFAULT NULL,
-  `CUST_FAX` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`CUST_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='CUSTOMER MAXI\r\nDBTR_ID=INPUT DIRECT\r\nDBTR_REF=FROM';
+  `idDbtr` bigint(20) NOT NULL AUTO_INCREMENT,
+  `kdDbtr` varchar(50) NOT NULL,
+  `nmDbtr` varchar(255) NOT NULL,
+  `alamat` text NOT NULL,
+  `pic` varchar(255) NOT NULL,
+  `tlp1` bigint(20) NOT NULL,
+  `tlp2` bigint(20) NOT NULL,
+  `fax` bigint(20) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `website` varchar(255) NOT NULL,
+  `note` text NOT NULL,
+  `status` int(11) NOT NULL,
+  `createBy` varchar(255) NOT NULL,
+  `createAt` varchar(255) NOT NULL,
+  `updateAt` varchar(255) NOT NULL,
+  `data_all` varchar(255) NOT NULL,
+  PRIMARY KEY (`idDbtr`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COMMENT='Distributor';
 
 -- ----------------------------
 -- Records of d0001
 -- ----------------------------
+<<<<<<< HEAD
+INSERT INTO `d0001` VALUES ('1', 'KD001', 'Nama Dbtr 1', 'awd', 'asdwd', '43345', '0', '0', 'sadaw@adw.sad', 'awddwa', 'awdas', '0', '', '', 'admin', '');
+INSERT INTO `d0001` VALUES ('3', 'KD003', 'Nama Dbtr 3', 'asdf', 'sdf', '123', '0', '0', '', '', '', '1', '', '', 'admin', '');
+INSERT INTO `d0001` VALUES ('4', 'KD004', 'Nama Dbtr 4', 'aw', 'dawadwawd', '2131213', '0', '0', '', '', '', '0', 'admin', '', 'admin', '');
+INSERT INTO `d0001` VALUES ('5', 'KD005', 'Nama Dbtr 5', 'awd', 'awdawdawdawd', '123213', '0', '123123', 'adwawd@adw', 'adwawd', 'awdawdsasd', '1', 'admin', '', 'admin', '');
+INSERT INTO `d0001` VALUES ('6', 'KD006', 'Nama Dbtr 6', 'awd', 'awdawd', '123', '0', '213123', 'adwD@daw.asd', 'awdawd', 'adwdwa', '1', 'admin', '', 'admin', '');
+
+-- ----------------------------
+-- Table structure for `ub0001`
+-- ----------------------------
+DROP TABLE IF EXISTS `ub0001`;
+CREATE TABLE `ub0001` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `kdUnit` varchar(25) NOT NULL,
+  `nmUnit` varchar(255) NOT NULL,
+  `qty` bigint(20) NOT NULL,
+  `size` int(11) DEFAULT NULL,
+  `weight` int(11) DEFAULT NULL,
+  `color` varchar(255) NOT NULL,
+  `note` text NOT NULL,
+  `status` int(11) DEFAULT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `created_at` varchar(255) NOT NULL,
+  `updated_at` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COMMENT='Barang Unit';
+
+-- ----------------------------
+-- Records of ub0001
+-- ----------------------------
+INSERT INTO `ub0001` VALUES ('1', 'U001', 'PCS (1PCS)', '242', null, null, '', '', null, '', '', 'admin');
+INSERT INTO `ub0001` VALUES ('2', 'U002', 'Kardus (32PCS)', '32', null, null, '', '', null, 'admin', '', 'admin');
+INSERT INTO `ub0001` VALUES ('3', 'brg001', 'Kardus (34PCS)', '34', null, null, '', '', null, 'admin', '', 'admin');
+INSERT INTO `ub0001` VALUES ('4', 'BOX001', 'BOX (12Kardus)', '12', null, null, '', '', null, 'admin', '', '');
+=======
 INSERT INTO `d0001` VALUES ('1', 'PONDOK CITRA BAKERY', '2', '000017', '1', '1', '2015-03-01', 'DWIDJA PRANATA', '59402076', 'CITRARAYA BLOK D1 NO.21R', '9402076', '9402076');
 INSERT INTO `d0001` VALUES ('M00337', 'PONDOK CITRA BAKERY', '1', '000017', '1', '1', '2015-03-01', 'DWIDJA PRANATA', '59402076', 'CITRARAYA BLOK D1 NO.21R', '9402076', '9402076');
 
@@ -235,3 +224,4 @@ CREATE TABLE `tc_inv` (
 -- ----------------------------
 -- Records of tc_inv
 -- ----------------------------
+>>>>>>> master
