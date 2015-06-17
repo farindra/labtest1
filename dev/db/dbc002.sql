@@ -2,15 +2,26 @@
 Navicat MySQL Data Transfer
 
 Source Server         : phpmyadmin
+<<<<<<< HEAD
 Source Server Version : 50540
+=======
+Source Server Version : 50620
+>>>>>>> master
 Source Host           : localhost:3306
 Source Database       : dbc002
 
 Target Server Type    : MYSQL
+<<<<<<< HEAD
 Target Server Version : 50540
 File Encoding         : 65001
 
 Date: 2015-06-17 05:22:16
+=======
+Target Server Version : 50620
+File Encoding         : 65001
+
+Date: 2015-06-15 17:35:17
+>>>>>>> master
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -102,6 +113,7 @@ CREATE TABLE `d0001` (
 -- ----------------------------
 -- Records of d0001
 -- ----------------------------
+<<<<<<< HEAD
 INSERT INTO `d0001` VALUES ('1', 'KD001', 'Nama Dbtr 1', 'awd', 'asdwd', '43345', '0', '0', 'sadaw@adw.sad', 'awddwa', 'awdas', '0', '', '', 'admin', '');
 INSERT INTO `d0001` VALUES ('3', 'KD003', 'Nama Dbtr 3', 'asdf', 'sdf', '123', '0', '0', '', '', '', '1', '', '', 'admin', '');
 INSERT INTO `d0001` VALUES ('4', 'KD004', 'Nama Dbtr 4', 'aw', 'dawadwawd', '2131213', '0', '0', '', '', '', '0', 'admin', '', 'admin', '');
@@ -135,3 +147,81 @@ INSERT INTO `ub0001` VALUES ('1', 'U001', 'PCS (1PCS)', '242', null, null, '', '
 INSERT INTO `ub0001` VALUES ('2', 'U002', 'Kardus (32PCS)', '32', null, null, '', '', null, 'admin', '', 'admin');
 INSERT INTO `ub0001` VALUES ('3', 'brg001', 'Kardus (34PCS)', '34', null, null, '', '', null, 'admin', '', 'admin');
 INSERT INTO `ub0001` VALUES ('4', 'BOX001', 'BOX (12Kardus)', '12', null, null, '', '', null, 'admin', '', '');
+=======
+INSERT INTO `d0001` VALUES ('1', 'PONDOK CITRA BAKERY', '2', '000017', '1', '1', '2015-03-01', 'DWIDJA PRANATA', '59402076', 'CITRARAYA BLOK D1 NO.21R', '9402076', '9402076');
+INSERT INTO `d0001` VALUES ('M00337', 'PONDOK CITRA BAKERY', '1', '000017', '1', '1', '2015-03-01', 'DWIDJA PRANATA', '59402076', 'CITRARAYA BLOK D1 NO.21R', '9402076', '9402076');
+
+-- ----------------------------
+-- Table structure for `taa_sales`
+-- ----------------------------
+DROP TABLE IF EXISTS `taa_sales`;
+CREATE TABLE `taa_sales` (
+  `SL_DTL_ID` varchar(20) NOT NULL DEFAULT '',
+  `SL_ID` varchar(20) NOT NULL,
+  PRIMARY KEY (`SL_DTL_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of taa_sales
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `ta_sales`
+-- ----------------------------
+DROP TABLE IF EXISTS `ta_sales`;
+CREATE TABLE `ta_sales` (
+  `SL_ID` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of ta_sales
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `tba_po`
+-- ----------------------------
+DROP TABLE IF EXISTS `tba_po`;
+CREATE TABLE `tba_po` (
+  `SL_ID` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of tba_po
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `tb_po`
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_po`;
+CREATE TABLE `tb_po` (
+  `SL_ID` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of tb_po
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `tca_inv`
+-- ----------------------------
+DROP TABLE IF EXISTS `tca_inv`;
+CREATE TABLE `tca_inv` (
+  `SL_ID` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of tca_inv
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `tc_inv`
+-- ----------------------------
+DROP TABLE IF EXISTS `tc_inv`;
+CREATE TABLE `tc_inv` (
+  `SL_ID` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of tc_inv
+-- ----------------------------
+>>>>>>> master

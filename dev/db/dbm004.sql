@@ -2,23 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : phpmyadmin
-Source Server Version : 50540
+Source Server Version : 50620
 Source Host           : localhost:3306
-<<<<<<< HEAD:advanced/console/migrations/dbm000.sql
-Source Database       : dbm000
-=======
-Source Database       : dbm0004
->>>>>>> master:dev/db/dbm0004.sql
+Source Database       : dbm004
 
 Target Server Type    : MYSQL
-Target Server Version : 50540
+Target Server Version : 50620
 File Encoding         : 65001
 
-<<<<<<< HEAD:advanced/console/migrations/dbm000.sql
-Date: 2015-06-17 05:22:47
-=======
-Date: 2015-06-15 15:51:02
->>>>>>> master:dev/db/dbm0004.sql
+Date: 2015-06-15 17:35:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -119,13 +111,11 @@ CREATE TABLE `b1000` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `data_all` longtext,
   PRIMARY KEY (`id`,`kd_barang`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='Master Barang Umum';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of b1000
 -- ----------------------------
-INSERT INTO `b1000` VALUES ('1', 'awd', 'awd', 'awd', 'K1234', 'awd', 'qwea', 'awd', '', '12323', '347456', '', '', '', 'EFM', '', '', '1', 'admin', null, 'admin', '2015-06-16 16:59:39', null);
-INSERT INTO `b1000` VALUES ('2', 'tes', 'dawd', 'KB1', '123sd', 'awd', 'dwa', '', '', '123', '435', '', '', 'awd', 'EFM', '', '', '0', 'admin1', '2015-06-16 16:08:31', 'admin', '2015-06-16 17:20:10', null);
 
 -- ----------------------------
 -- Table structure for `b1001`
@@ -142,16 +132,11 @@ CREATE TABLE `b1001` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `status` smallint(6) DEFAULT '1',
   PRIMARY KEY (`id`,`kd_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COMMENT='Tipe Barang';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of b1001
 -- ----------------------------
-INSERT INTO `b1001` VALUES ('1', 'tes', 'awd', 'awds', 'admin', null, 'admin', '2015-06-16 11:47:01', '1');
-INSERT INTO `b1001` VALUES ('2', 'awdef', 'awd', 'awd', 'admin', null, null, null, '0');
-INSERT INTO `b1001` VALUES ('3', 'KB1', 'kode barang 1', 'notes', 'admin', null, null, null, '1');
-INSERT INTO `b1001` VALUES ('4', 'awd', 'ghjk', 'adw', 'admin', '2015-06-16 11:47:51', null, null, '1');
-INSERT INTO `b1001` VALUES ('5', 'wad', 'wad', 'dwas', 'admin', '2015-06-16 13:34:43', 'admin', '2015-06-16 13:34:53', '0');
 
 -- ----------------------------
 -- Table structure for `b1002`
@@ -168,16 +153,11 @@ CREATE TABLE `b1002` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `status` smallint(6) DEFAULT '1',
   PRIMARY KEY (`id`,`kd_kategori`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COMMENT='Kategori';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of b1002
 -- ----------------------------
-INSERT INTO `b1002` VALUES ('1', 'K1234', 'Nama Kategori', 'Note atau catatan', null, null, null, '2015-06-16 10:56:43', '1');
-INSERT INTO `b1002` VALUES ('2', 'K4567', 'Kategori 2', 'note', null, null, null, null, '0');
-INSERT INTO `b1002` VALUES ('3', '123sd', 'adwdaw', '', null, null, null, null, '0');
-INSERT INTO `b1002` VALUES ('4', 'adw', 'awd', 'awds', 'admin', '2015-06-16 11:49:15', 'admin', '2015-06-16 11:50:39', '1');
-INSERT INTO `b1002` VALUES ('5', 'awd', 'dwa', 'awd', 'admin', '2015-06-16 13:35:09', 'admin', '2015-06-16 13:35:18', '0');
 
 -- ----------------------------
 -- Table structure for `b1003`
@@ -197,30 +177,11 @@ CREATE TABLE `b1003` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `status` smallint(6) DEFAULT '1',
   PRIMARY KEY (`id`,`kd_unit`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='Unit Barang';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of b1003
 -- ----------------------------
-INSERT INTO `b1003` VALUES ('1', 'awds', 'wda', 'awd', '123', 'awd', 'adw', 'admin', null, null, '2015-06-16 15:35:45', '1');
-INSERT INTO `b1003` VALUES ('2', 'awd', 'zxc', 'wad', '12', 'adw', 'awd', 'admin', '2015-06-16 13:45:36', null, '2015-06-16 15:51:48', '1');
-
--- ----------------------------
--- Table structure for `c1000`
--- ----------------------------
-DROP TABLE IF EXISTS `c1000`;
-CREATE TABLE `c1000` (
-  `id` int(11) NOT NULL,
-  `kd_corp` varchar(50) NOT NULL,
-  `nm_corp` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Master Corporate';
-
--- ----------------------------
--- Records of c1000
--- ----------------------------
-INSERT INTO `c1000` VALUES ('1', 'SSS', 'PT. SARANA SINAR SURYA');
-INSERT INTO `c1000` VALUES ('2', 'EFM', 'PT. EFENBI SUKSES MAKMUR');
-INSERT INTO `c1000` VALUES ('3', 'ALG', 'PT. ARTHA LIPAT GANDA');
 
 -- ----------------------------
 -- Table structure for `m1000`
@@ -243,35 +204,8 @@ CREATE TABLE `m1000` (
 -- ----------------------------
 -- Records of m1000
 -- ----------------------------
-INSERT INTO `m1000` VALUES ('1', 'sss_berita_acara', 'Berita Acara', '[{\"label\":\"<i class=\\\"fa fa-pencil\\\"></i> New\",\"url\":[\"new\"]},{\"label\":\"<i class=\\\"fa fa-suitcase\\\"></i> PM <span id=\\\"menu-badge-1\\\" class=\\\"badge badge-purple\\\" style=\\\"float: right\\\"></span>\",\"url\":[\"pm\"]},{\"label\":\"<i class=\\\"fa fa-inbox\\\"></i> Inbox\",\"url\":[\"inbox\"]},{\"label\":\"<i class=\\\"fa fa-send\\\"></i> Sent\",\"url\":[\"sent\"]},{\"label\":\"<i class=\\\"fa fa-folder-o\\\"></i> Draft\",\"url\":[\"draft\"]}]', '', null, null, null, '2015-06-13 17:10:22', '1');
-INSERT INTO `m1000` VALUES ('2', 'sss_po', 'Purchase Order', '[{\"label\":\"<i class=\\\"fa fa-pencil\\\"></i> New\",\"url\":[\"new\"]},{\"label\":\"<i class=\\\"fa fa-suitcase\\\"></i> PO List<span id=\\\"menu-badge-1\\\" class=\\\"badge badge-purple\\\" style=\\\"float: right\\\"></span>\",\"url\":[\"list\"]},{\"label\":\"<i class=\\\"fa fa-inbox\\\"></i> Setup\",\"url\":[\"setup\"]}]', null, null, null, null, '2015-06-12 11:23:40', '1');
-
--- ----------------------------
--- Table structure for `p1000`
--- ----------------------------
-DROP TABLE IF EXISTS `p1000`;
-CREATE TABLE `p1000` (
-  `id` int(11) NOT NULL,
-  `jenisCorp` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Jenis Perusahaan';
-
--- ----------------------------
--- Records of p1000
--- ----------------------------
-INSERT INTO `p1000` VALUES ('1', 'CV');
-INSERT INTO `p1000` VALUES ('2', 'FA');
-INSERT INTO `p1000` VALUES ('3', 'Koperasi');
-INSERT INTO `p1000` VALUES ('4', 'Maatschap');
-INSERT INTO `p1000` VALUES ('5', 'PK');
-INSERT INTO `p1000` VALUES ('6', 'PMA');
-INSERT INTO `p1000` VALUES ('7', 'PMDN');
-INSERT INTO `p1000` VALUES ('8', 'Persekutuan Pedata');
-INSERT INTO `p1000` VALUES ('9', 'Perusahaan Umum');
-INSERT INTO `p1000` VALUES ('10', 'Perusahaan Jawatan');
-INSERT INTO `p1000` VALUES ('11', 'PT');
-INSERT INTO `p1000` VALUES ('12', 'PT. TBK.');
-INSERT INTO `p1000` VALUES ('13', 'UD');
-INSERT INTO `p1000` VALUES ('14', 'Yayasan');
+INSERT INTO `m1000` VALUES ('1', 'sss_berita_acara', 'Berita Acara', '[{\"label\":\"<i class=\\\"fa fa-pencil\\\"></i> New\",\"url\":[\"new\"]},{\"label\":\"<i class=\\\"fa fa-suitcase\\\"></i> PM <span id=\\\"menu-badge-1\\\" class=\\\"badge badge-purple\\\" style=\\\"float: right\\\"></span>\",\"url\":[\"pm\"]},{\"label\":\"<i class=\\\"fa fa-inbox\\\"></i> Inbox\",\"url\":[\"inbox\"]},{\"label\":\"<i class=\\\"fa fa-send\\\"></i> Sent\",\"url\":[\"sent\"]},{\"label\":\"<i class=\\\"fa fa-folder-o\\\"></i> Draft\",\"url\":[\"draft\"]}]', null, null, null, null, null, '1');
+INSERT INTO `m1000` VALUES ('2', 'sss_po', 'Purchase Order', '[{\"label\":\"<i class=\\\"fa fa-pencil\\\"></i> PO\",\"url\":[\"new\"]},{\"label\":\"<i class=\\\"fa fa-suitcase\\\"></i> PO List<span id=\\\"menu-badge-1\\\" class=\\\"badge badge-purple\\\" style=\\\"float: right\\\"></span>\",\"url\":[\"list\"]},{\"label\":\"<i class=\\\"fa fa-inbox\\\"></i> Setup\",\"url\":[\"setup\"]}]', null, null, null, null, '2015-06-15 16:24:20', '1');
 
 -- ----------------------------
 -- Table structure for `s1000`
@@ -300,13 +234,8 @@ CREATE TABLE `s1000` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `data_all` longtext,
   PRIMARY KEY (`id`,`kd_supplier`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COMMENT='Master Suplier';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of s1000
 -- ----------------------------
-INSERT INTO `s1000` VALUES ('1', 'dwa', 'tester suplier', 'alamat', 'kota', 'telp', 'mobi', 'fax', 'email', 'web', 'img', 'awd', 'ALG', 'awd', 'wad', '1', 'tds', '0000-00-00 00:00:00', 'admin', '2015-06-16 11:56:07', 'daw');
-INSERT INTO `s1000` VALUES ('2', 'qwea', 'dawd', 'awd', 'wad', 'wad', 'awd', 'adw', 'awd', 'awd', null, 'awd', 'ALG', null, null, '1', null, null, null, '2015-06-11 15:58:55', null);
-INSERT INTO `s1000` VALUES ('3', 'wad', 'wad', 'wad', 'wa', 'wawad', 'wad', 'waawd', 'wawad', 'wdawda', null, 'awd', 'EFM', null, null, '1', null, null, null, null, null);
-INSERT INTO `s1000` VALUES ('4', 'sdfg', 'fghjkl', 'fghjkl', 'sdfghjkxcv', 'bnxcvb', 'rtyuio', 'dfghui', 'fghjiko', 'fgyhuji', null, 'fghjkl', 'SSS', null, null, '1', null, null, null, '2015-06-16 15:54:00', null);
-INSERT INTO `s1000` VALUES ('5', 'awdaw', 'daw', 'dwad', 'awd', 'awd', 'awd', 'awd', 'awd', 'awd', null, 'awd', 'EFM', null, null, '0', 'admin', '2015-06-16 11:56:59', null, null, null);

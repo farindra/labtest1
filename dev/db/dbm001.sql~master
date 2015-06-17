@@ -2,27 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : phpmyadmin
-<<<<<<< HEAD:dev/db/dbm001.sql
-Source Server Version : 50540
-Source Host           : localhost:3306
-Source Database       : dbm001
-
-Target Server Type    : MYSQL
-Target Server Version : 50540
-File Encoding         : 65001
-
-Date: 2015-06-17 05:22:35
-=======
 Source Server Version : 50620
 Source Host           : localhost:3306
-Source Database       : dbm0001
+Source Database       : dbm001
 
 Target Server Type    : MYSQL
 Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2015-06-15 15:50:14
->>>>>>> master:dev/db/dbm0001.sql
+Date: 2015-06-15 17:35:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -59,7 +47,6 @@ INSERT INTO `auth_assignment` VALUES ('HRD_OWNER', '1', '1432795531');
 INSERT INTO `auth_assignment` VALUES ('IT_OWNER', '1', '1432810536');
 INSERT INTO `auth_assignment` VALUES ('Permission_ACC_Full', '1', '1432807665');
 INSERT INTO `auth_assignment` VALUES ('Permission_HRD_Full', '1', '1432795464');
-INSERT INTO `auth_assignment` VALUES ('Permission_IT_Full', '1', '1433758898');
 INSERT INTO `auth_assignment` VALUES ('SSS_OWNER', '1', '1432789203');
 
 -- ----------------------------
@@ -107,11 +94,6 @@ INSERT INTO `auth_item` VALUES ('/dashgrfprodak/index', '2', null, null, null, '
 INSERT INTO `auth_item` VALUES ('/dashgrfsales/index', '2', null, null, null, '1432811924', '1432811924');
 INSERT INTO `auth_item` VALUES ('/desdraff/index', '2', null, null, null, '1432808808', '1432808808');
 INSERT INTO `auth_item` VALUES ('/desmatrial/index', '2', null, null, null, '1432808793', '1432808793');
-INSERT INTO `auth_item` VALUES ('/distributor/index', '2', null, null, null, '1433493014', '1433493014');
-INSERT INTO `auth_item` VALUES ('/esm/barang/index', '2', null, null, null, '1433758313', '1433758313');
-INSERT INTO `auth_item` VALUES ('/esm/distributor/index', '2', null, null, null, '1433493318', '1433493318');
-INSERT INTO `auth_item` VALUES ('/esm/suplier/index', '2', null, null, null, '1434014882', '1434014882');
-INSERT INTO `auth_item` VALUES ('/esm/unitbarang/index', '2', null, null, null, '1433818152', '1433818152');
 INSERT INTO `auth_item` VALUES ('/esmcustomer/index', '2', null, null, null, '1432698318', '1432698318');
 INSERT INTO `auth_item` VALUES ('/esmdistributor/index', '2', null, null, null, '1432698281', '1432698281');
 INSERT INTO `auth_item` VALUES ('/esmprodak/index', '2', null, null, null, '1432698263', '1432698263');
@@ -148,17 +130,8 @@ INSERT INTO `auth_item` VALUES ('/Itlogerror/index', '2', null, null, null, '143
 INSERT INTO `auth_item` VALUES ('/Itnetwork/index', '2', null, null, null, '1432809743', '1432809743');
 INSERT INTO `auth_item` VALUES ('/itprogramer/index', '2', null, null, null, '1433302248', '1433302248');
 INSERT INTO `auth_item` VALUES ('/Itsupport/index', '2', null, null, null, '1432809756', '1432809756');
-<<<<<<< HEAD:dev/db/dbm001.sql
-INSERT INTO `auth_item` VALUES ('/master/barangumum', '2', null, null, null, '1434424518', '1434424518');
-INSERT INTO `auth_item` VALUES ('/master/kategori', '2', null, null, null, '1434426036', '1434426036');
-INSERT INTO `auth_item` VALUES ('/master/suplier/index', '2', null, null, null, '1434358494', '1434358494');
-INSERT INTO `auth_item` VALUES ('/master/tipebarang', '2', null, null, null, '1434425503', '1434425503');
-INSERT INTO `auth_item` VALUES ('/master/unitbarang', '2', null, null, null, '1434426091', '1434426091');
-INSERT INTO `auth_item` VALUES ('/sss/beritaacara', '2', null, null, null, '1434462102', '1434462102');
-=======
 INSERT INTO `auth_item` VALUES ('/sss/a1000', '2', null, null, null, '1433747457', '1433747457');
 INSERT INTO `auth_item` VALUES ('/sss/beritaacara', '2', null, null, null, '1433833431', '1433833431');
->>>>>>> master:dev/db/dbm0001.sql
 INSERT INTO `auth_item` VALUES ('/ssskonsumen/index', '2', null, null, null, '1432665390', '1432665390');
 INSERT INTO `auth_item` VALUES ('/sssmarketing/index', '2', null, null, null, '1432665448', '1432665448');
 INSERT INTO `auth_item` VALUES ('/sssprodak/index', '2', null, null, null, '1432665346', '1432665346');
@@ -204,7 +177,7 @@ INSERT INTO `auth_item` VALUES ('IT_OWNER', '1', 'IT Show ALL', 'OWNER', null, '
 INSERT INTO `auth_item` VALUES ('Permission_ACC_Full', '2', 'Dept. Accounting - All Menu ', null, null, '1432804684', '1432806532');
 INSERT INTO `auth_item` VALUES ('Permission_ALG_Full', '2', 'PT. Arta Lipat Ganda - All Menu  ', null, null, '1432699423', '1432806466');
 INSERT INTO `auth_item` VALUES ('Permission_DESIGN_Full', '2', 'Dept. Design- All Menu ', null, null, '1432808867', '1432808934');
-INSERT INTO `auth_item` VALUES ('Permission_ESM_Full', '2', 'PT. Efembi Sukses Makmur / Maxindo - All Menu ', null, null, '1432698661', '1433493341');
+INSERT INTO `auth_item` VALUES ('Permission_ESM_Full', '2', 'PT. Efembi Sukses Makmur / Maxindo - All Menu ', null, null, '1432698661', '1432806485');
 INSERT INTO `auth_item` VALUES ('Permission_FNC_Full', '2', 'Dept. Finance - All Menu ', null, null, '1432804718', '1432807745');
 INSERT INTO `auth_item` VALUES ('Permission_GA_Full', '2', 'Dept. General Affair - All Menu ', null, null, '1432808020', '1432808053');
 INSERT INTO `auth_item` VALUES ('Permission_GOSENT_Full', '2', 'PT.Gosent - All Menu ', null, null, '1432708101', '1432809192');
@@ -251,6 +224,7 @@ INSERT INTO `auth_item_child` VALUES ('Permission_ALG_Full', '/algprodusen/index
 INSERT INTO `auth_item_child` VALUES ('Permission_ALG_Full', '/algpurchasing/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_ALG_Full', '/algselestrans/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_ALG_Full', '/algwarehouse/index');
+INSERT INTO `auth_item_child` VALUES ('Permission_Umum_Beritaacara', '/bt/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_Umum_Chat', '/chating/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_Umum_Dashboard', '/dashboarda/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_Umum_Dashboard', '/dashboardcorp/index');
@@ -265,10 +239,9 @@ INSERT INTO `auth_item_child` VALUES ('Permission_Report_Dashboard', '/dashgrfpr
 INSERT INTO `auth_item_child` VALUES ('Permission_Report_Dashboard', '/dashgrfsales/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_DESIGN_Full', '/desdraff/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_DESIGN_Full', '/desmatrial/index');
-INSERT INTO `auth_item_child` VALUES ('Permission_ESM_Full', '/esm/barang/index');
-INSERT INTO `auth_item_child` VALUES ('Permission_ESM_Full', '/esm/distributor/index');
-INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/esm/unitbarang/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_ESM_Full', '/esmcustomer/index');
+INSERT INTO `auth_item_child` VALUES ('Permission_ESM_Full', '/esmdistributor/index');
+INSERT INTO `auth_item_child` VALUES ('Permission_ESM_Full', '/esmprodak/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_ESM_Full', '/esmprodusen/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_ESM_Full', '/esmpurchasing/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_ESM_Full', '/esmsalesment/index');
@@ -302,15 +275,7 @@ INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itlogerror/index')
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itnetwork/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/itprogramer/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itsupport/index');
-<<<<<<< HEAD:dev/db/dbm001.sql
-INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/barangumum');
-INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/kategori');
-INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/suplier/index');
-INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/tipebarang');
-INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/unitbarang');
-=======
 INSERT INTO `auth_item_child` VALUES ('DEFAULT_MENU', '/sss/a1000');
->>>>>>> master:dev/db/dbm0001.sql
 INSERT INTO `auth_item_child` VALUES ('Permission_Umum_Beritaacara', '/sss/beritaacara');
 INSERT INTO `auth_item_child` VALUES ('Permission_SSS_Full', '/ssskonsumen/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_SSS_Full', '/sssmarketing/index');
@@ -373,7 +338,7 @@ CREATE TABLE `menu` (
   `order` int(11) DEFAULT NULL,
   `data` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of menu
@@ -396,7 +361,7 @@ INSERT INTO `menu` VALUES ('37', 'Marketing', '21', '/sssmarketing/index', '3', 
 INSERT INTO `menu` VALUES ('38', 'Sales', '21', '/ssssales/index', '2', null);
 INSERT INTO `menu` VALUES ('39', 'Master ESM', '22', null, '1', null);
 INSERT INTO `menu` VALUES ('40', 'Prodak', '39', '/esmprodak/index', '1', null);
-INSERT INTO `menu` VALUES ('41', 'Distributor', '39', '/esm/distributor/index', '2', null);
+INSERT INTO `menu` VALUES ('41', 'Distributor', '39', '/esmdistributor/index', '2', null);
 INSERT INTO `menu` VALUES ('42', 'Salesment', '39', '/esmsalesment/index', '4', null);
 INSERT INTO `menu` VALUES ('43', 'Customer', '39', '/esmcustomer/index', '5', null);
 INSERT INTO `menu` VALUES ('44', 'Produsen', '39', '/esmprodusen/index', '3', null);
@@ -464,15 +429,6 @@ INSERT INTO `menu` VALUES ('107', 'Corporation', '30', '/dashboardcorp/index', '
 INSERT INTO `menu` VALUES ('108', 'Department', '30', '/dashboarddep/index', '3', null);
 INSERT INTO `menu` VALUES ('109', 'Staff', '30', '/dashboardstaff/index', '4', null);
 INSERT INTO `menu` VALUES ('110', 'Operational', '30', '/dashboardops/index', '5', null);
-INSERT INTO `menu` VALUES ('112', 'Barang', '39', '/esm/barang/index', null, null);
-INSERT INTO `menu` VALUES ('113', 'Master Unit', '39', '/esm/unitbarang/index', null, null);
-INSERT INTO `menu` VALUES ('116', 'Master Umum', null, null, '8', null);
-INSERT INTO `menu` VALUES ('117', 'Suplier', '116', '/master/suplier/index', null, null);
-INSERT INTO `menu` VALUES ('118', 'Barang Umum', '116', '/master/barangumum', null, null);
-INSERT INTO `menu` VALUES ('119', 'Tipe Barang', '116', '/master/tipebarang', null, null);
-INSERT INTO `menu` VALUES ('120', 'Unit Barang', '116', '/master/unitbarang', null, null);
-INSERT INTO `menu` VALUES ('121', 'Kategori', '116', '/master/kategori', null, null);
-INSERT INTO `menu` VALUES ('122', 'Berita Acara', '21', '/sss/beritaacara', null, null);
 
 -- ----------------------------
 -- Table structure for `user`

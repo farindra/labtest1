@@ -36,7 +36,6 @@ class M1000Query extends \yii\db\ActiveQuery
     public function findMenu($kdmenu)
     {
         $this->where(['=','kd_menu', $kdmenu]);
-
         return $this;
     }
 }
