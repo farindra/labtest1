@@ -3,9 +3,6 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
-/* @var $this yii\web\View */
-/* @var $model lukisongroup\models\system\M1000 */
-
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'M1000s', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
