@@ -4,9 +4,6 @@ use yii\helpers\Html;
 use lukisongroup\assets\AppAsset;
 AppAsset::register($this);
 
-/* @var $this yii\web\View */
-/* @var $model lukisongroup\models\system\M1000 */
-
 $this->title = 'Create M1000';
 $this->params['breadcrumbs'][] = ['label' => 'M1000s', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -29,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <script type="text/javascript">
         $(document).ready(function() {
-           $('#m1000-note').val('good');
+           $('#m1000-status').val('checked');
         });
     </script>
 

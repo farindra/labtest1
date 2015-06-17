@@ -1,20 +1,13 @@
 /*
 Navicat MySQL Data Transfer
-
 Source Server         : phpmyadmin
-Source Server Version : 50620
+Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : dbc001
-
 Target Server Type    : MYSQL
-Target Server Version : 50620
+Target Server Version : 50540
 File Encoding         : 65001
-
-<<<<<<< HEAD
 Date: 2015-06-17 05:22:06
-=======
-Date: 2015-06-15 17:34:55
->>>>>>> master
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -33,75 +26,12 @@ CREATE TABLE `a------` (
 -- ----------------------------
 
 -- ----------------------------
-<<<<<<< HEAD
 -- Table structure for `b------`
 -- ----------------------------
 DROP TABLE IF EXISTS `b------`;
 CREATE TABLE `b------` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-=======
--- Table structure for `a1000`
--- ----------------------------
-DROP TABLE IF EXISTS `a1000`;
-CREATE TABLE `a1000` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Header Berita Acara',
-  `kd_berita` varchar(20) NOT NULL,
-  `judul` varchar(200) DEFAULT NULL,
-  `isi` text,
-  `kd_corp` varchar(20) DEFAULT NULL,
-  `kd_cab` varchar(20) DEFAULT NULL,
-  `kd_dep` varchar(20) DEFAULT NULL,
-  `data_pict` text,
-  `data_file` text,
-  `status` smallint(6) DEFAULT '0',
-  `created_at` datetime DEFAULT NULL,
-  `created_by` varchar(100) DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `data_all` longtext,
-  `menu` longtext,
-  PRIMARY KEY (`id`,`kd_berita`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of a1000
--- ----------------------------
-
--- ----------------------------
--- Table structure for `a1001`
--- ----------------------------
-DROP TABLE IF EXISTS `a1001`;
-CREATE TABLE `a1001` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Derail Berita Acara - User Attribut',
-  `kd_berita` varchar(20) NOT NULL,
-  `id_user` bigint(20) NOT NULL,
-  `type` smallint(6) DEFAULT NULL,
-  `status` smallint(6) DEFAULT NULL,
-  `created_by` varchar(100) DEFAULT NULL,
-  `created_at` date DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`,`kd_berita`,`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of a1001
--- ----------------------------
-
--- ----------------------------
--- Table structure for `a1002`
--- ----------------------------
-DROP TABLE IF EXISTS `a1002`;
-CREATE TABLE `a1002` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Detail Berita Acara - Chat',
-  `kd_berita` varchar(20) NOT NULL,
-  `id_user` bigint(20) NOT NULL,
-  `chat` text,
-  `status` smallint(6) DEFAULT NULL,
-  `created_by` varchar(100) DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`,`kd_berita`,`id_user`)
->>>>>>> master
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -120,6 +50,36 @@ CREATE TABLE `c------` (
 -- ----------------------------
 -- Records of c------
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `m------`
+-- ----------------------------
+DROP TABLE IF EXISTS `m------`;
+CREATE TABLE `m------` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of m------
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `migration`
+-- ----------------------------
+DROP TABLE IF EXISTS `migration`;
+CREATE TABLE `migration` (
+  `version` varchar(180) NOT NULL,
+  `apply_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of migration
+-- ----------------------------
+INSERT INTO `migration` VALUES ('m000000_000000_base', '1433889914');
+INSERT INTO `migration` VALUES ('m130524_201442_init', '1433889925');
+INSERT INTO `migration` VALUES ('m150609_225323_sss', '1433891169');
 
 -- ----------------------------
 -- Table structure for `r------`
@@ -218,4 +178,3 @@ CREATE TRIGGER `create_tab` AFTER INSERT ON `_eka_tab_mapping` FOR EACH ROW BEGI
   
 END
 ;;
-DELIMITER ;

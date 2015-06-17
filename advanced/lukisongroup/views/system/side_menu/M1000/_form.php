@@ -4,9 +4,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\checkbox\CheckboxX;
 
-/* @var $this yii\web\View */
-/* @var $model lukisongroup\models\system\M1000 */
-/* @var $form yii\widgets\ActiveForm */
 ?>
 <div class="container">
 <div class="col-md-4 m1000-form">

@@ -1,16 +1,21 @@
 /*
 Navicat MySQL Data Transfer
-
 Source Server         : phpmyadmin
 Source Server Version : 50540
 Source Host           : localhost:3306
+<<<<<<< HEAD:advanced/console/migrations/dbm000.sql
 Source Database       : dbm000
-
+=======
+Source Database       : dbm0004
+>>>>>>> master:dev/db/dbm0004.sql
 Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
-
+<<<<<<< HEAD:advanced/console/migrations/dbm000.sql
 Date: 2015-06-17 05:22:47
+=======
+Date: 2015-06-15 15:51:02
+>>>>>>> master:dev/db/dbm0004.sql
 */
 
 SET FOREIGN_KEY_CHECKS=0;

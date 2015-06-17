@@ -1,28 +1,13 @@
 /*
 Navicat MySQL Data Transfer
-
 Source Server         : phpmyadmin
-<<<<<<< HEAD:dev/db/dbm001.sql
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : dbm001
-
 Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
-
 Date: 2015-06-17 05:22:35
-=======
-Source Server Version : 50620
-Source Host           : localhost:3306
-Source Database       : dbm0001
-
-Target Server Type    : MYSQL
-Target Server Version : 50620
-File Encoding         : 65001
-
-Date: 2015-06-15 15:50:14
->>>>>>> master:dev/db/dbm0001.sql
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -148,17 +133,12 @@ INSERT INTO `auth_item` VALUES ('/Itlogerror/index', '2', null, null, null, '143
 INSERT INTO `auth_item` VALUES ('/Itnetwork/index', '2', null, null, null, '1432809743', '1432809743');
 INSERT INTO `auth_item` VALUES ('/itprogramer/index', '2', null, null, null, '1433302248', '1433302248');
 INSERT INTO `auth_item` VALUES ('/Itsupport/index', '2', null, null, null, '1432809756', '1432809756');
-<<<<<<< HEAD:dev/db/dbm001.sql
 INSERT INTO `auth_item` VALUES ('/master/barangumum', '2', null, null, null, '1434424518', '1434424518');
 INSERT INTO `auth_item` VALUES ('/master/kategori', '2', null, null, null, '1434426036', '1434426036');
 INSERT INTO `auth_item` VALUES ('/master/suplier/index', '2', null, null, null, '1434358494', '1434358494');
 INSERT INTO `auth_item` VALUES ('/master/tipebarang', '2', null, null, null, '1434425503', '1434425503');
 INSERT INTO `auth_item` VALUES ('/master/unitbarang', '2', null, null, null, '1434426091', '1434426091');
 INSERT INTO `auth_item` VALUES ('/sss/beritaacara', '2', null, null, null, '1434462102', '1434462102');
-=======
-INSERT INTO `auth_item` VALUES ('/sss/a1000', '2', null, null, null, '1433747457', '1433747457');
-INSERT INTO `auth_item` VALUES ('/sss/beritaacara', '2', null, null, null, '1433833431', '1433833431');
->>>>>>> master:dev/db/dbm0001.sql
 INSERT INTO `auth_item` VALUES ('/ssskonsumen/index', '2', null, null, null, '1432665390', '1432665390');
 INSERT INTO `auth_item` VALUES ('/sssmarketing/index', '2', null, null, null, '1432665448', '1432665448');
 INSERT INTO `auth_item` VALUES ('/sssprodak/index', '2', null, null, null, '1432665346', '1432665346');
@@ -302,15 +282,11 @@ INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itlogerror/index')
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itnetwork/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/itprogramer/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/Itsupport/index');
-<<<<<<< HEAD:dev/db/dbm001.sql
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/barangumum');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/kategori');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/suplier/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/tipebarang');
 INSERT INTO `auth_item_child` VALUES ('Permission_IT_Full', '/master/unitbarang');
-=======
-INSERT INTO `auth_item_child` VALUES ('DEFAULT_MENU', '/sss/a1000');
->>>>>>> master:dev/db/dbm0001.sql
 INSERT INTO `auth_item_child` VALUES ('Permission_Umum_Beritaacara', '/sss/beritaacara');
 INSERT INTO `auth_item_child` VALUES ('Permission_SSS_Full', '/ssskonsumen/index');
 INSERT INTO `auth_item_child` VALUES ('Permission_SSS_Full', '/sssmarketing/index');
@@ -439,7 +415,7 @@ INSERT INTO `menu` VALUES ('82', 'Inventaris', '72', '/gainventaris/index', '1',
 INSERT INTO `menu` VALUES ('83', 'Maintenance', '72', '/gaimaintenance/index', '2', null);
 INSERT INTO `menu` VALUES ('84', 'MESSAGE', null, null, '2', null);
 INSERT INTO `menu` VALUES ('85', 'Chat', '84', '/chating/index', '1', null);
-INSERT INTO `menu` VALUES ('86', 'Berita Acara', '84', '/sss/beritaacara', '2', null);
+INSERT INTO `menu` VALUES ('86', 'Berita Acara', '84', '/bt/index', '2', null);
 INSERT INTO `menu` VALUES ('87', 'General', '30', '/dashboarda/index', '1', null);
 INSERT INTO `menu` VALUES ('88', 'Matrial Promotion', '73', '/desmatrial/index', '1', null);
 INSERT INTO `menu` VALUES ('89', 'Draff Design', '73', '/desdraff/index', '2', null);
