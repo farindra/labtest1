@@ -47,11 +47,7 @@ return [
         ],
 		'db4' => [
             'class' => 'yii\db\Connection',
-<<<<<<< HEAD
             'dsn' => 'mysql:host=localhost;dbname=dbm000',
-=======
-            'dsn' => 'mysql:host=localhost;dbname=dbm004',
->>>>>>> master
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',
