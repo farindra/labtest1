@@ -26,28 +26,28 @@ return [
         /*-ptr.nov- : Admin Menu*/
         'db1' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbm0001',
+            'dsn' => 'mysql:host=localhost;dbname=dbm001',
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',
         ],
         'db2' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbm0002',
+            'dsn' => 'mysql:host=localhost;dbname=dbm002',
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',
         ],
         'db3' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbm0003',
+            'dsn' => 'mysql:host=localhost;dbname=dbm003',
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',
         ],
 		'db4' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbm0004',
+            'dsn' => 'mysql:host=localhost;dbname=dbm000',
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',
@@ -55,6 +55,13 @@ return [
 		'db_sss' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=dbc001',
+            'username' => 'root',
+            'password' =>'',
+            'charset' => 'utf8',
+        ],
+        'db_esm' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=dbc002',
             'username' => 'root',
             'password' =>'',
             'charset' => 'utf8',

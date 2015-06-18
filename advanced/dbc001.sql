@@ -1,12 +1,15 @@
 /*
 Navicat MySQL Data Transfer
+
 Source Server         : phpmyadmin
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : dbc001
+
 Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
+
 Date: 2015-06-17 05:22:06
 */
 
@@ -178,3 +181,4 @@ CREATE TRIGGER `create_tab` AFTER INSERT ON `_eka_tab_mapping` FOR EACH ROW BEGI
   
 END
 ;;
+DELIMITER ;
