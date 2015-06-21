@@ -119,7 +119,7 @@ dmstr\web\AdminLteAsset::register($this);
 
         <div class="content-wrapper" >
             <!--<aside class="main-sidebar">
-                <?php
+                <?php  /*
                     if (!Yii::$app->user->isGuest) {
                         echo SideNav::widget([
                             'items' => $menuItems,
@@ -128,7 +128,7 @@ dmstr\web\AdminLteAsset::register($this);
                             'type' => SideNav::TYPE_DEFAULT,
                             'options' => ['class' => 'sidebar-nav'],
                         ]);
-                    };
+                    };*/
                 ?>
 
 

@@ -24,56 +24,7 @@ return [
     /*-ptr.nov- : Public Components All*/
     'components' => [
         /*-ptr.nov- : Admin Menu*/
-        'db1' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbm001',
-            'username' => 'root',
-            'password' =>'',
-            'charset' => 'utf8',
-        ],
-        'db2' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbm002',
-            'username' => 'root',
-            'password' =>'',
-            'charset' => 'utf8',
-        ],
-        'db3' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbm003',
-            'username' => 'root',
-            'password' =>'',
-            'charset' => 'utf8',
-        ],
-		'db4' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbm000',
-            'username' => 'root',
-            'password' =>'',
-            'charset' => 'utf8',
-        ],
-		'db_sss' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbc001',
-            'username' => 'root',
-            'password' =>'',
-            'charset' => 'utf8',
-        ],
-        'db_esm' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dbc002',
-            'username' => 'root',
-            'password' =>'',
-            'charset' => 'utf8',
-        ],
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'viewPath' => '@common/mail',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
-        ],
+
 
         /*-ptr.nov-: Public Component UrlManager*/
         'urlManager' => [

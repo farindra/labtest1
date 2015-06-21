@@ -5,11 +5,13 @@ namespace lukisongroup\controllers\sss;
 use Yii;
 use lukisongroup\models\master\berita_acara\A1000;
 use lukisongroup\models\master\berita_acara\A1001;
-use lukisongroup\models\master\berita_acara\A1000Search;
+use lukisongroup\models\system\User;
 use lukisongroup\models\system\side_menu\M1000;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+
 
 class Berita_acaraController extends Controller
 {
@@ -29,7 +31,7 @@ class Berita_acaraController extends Controller
     public function actionIndex()
     {
         //set menu side menu index
-        $side_menu=M1000::find()->findMenu('sss_berita_acara')->one()->jval;
+        $side_menu=M1000:: find()->findMenu('sss_berita_acara')->one()->jval;
         $side_menu=json_decode($side_menu,true);
 
         return $this->render('index',['side_menu'=>$side_menu]);
@@ -38,6 +40,10 @@ class Berita_acaraController extends Controller
     public function actionNew()
     {
         //set menu side menu index
+        $user_list=User::find()->select('username')->where(['CORP'=>'SSS','CAB'=>'HO','DEP'=>'5'])->asArray()->all();
+        //$user_list=ArrayHelper::map(User::find()->where(['CORP'=>'SSS','CAB'=>'HO','DEP'=>'5'])->all(),'id','username');
+        //$user_list=json_encode($user_list);
+        $user_list=ArrayHelper::getColumn($user_list,'username',false);
         $side_menu=M1000::find()->findMenu('sss_berita_acara')->one()->jval;
         $side_menu=json_decode($side_menu,true);
         $model = new A1000();$model2 = new A1001;
@@ -45,7 +51,7 @@ class Berita_acaraController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id, 'kd_berita' => $model->kd_berita]);
         } else {
-            return $this->render('new',['side_menu'=>$side_menu,'model' => $model,'model2' => $model2
+            return $this->render('new',['side_menu'=>$side_menu,'model' => $model,'model2' => $model2,'user_list' => $user_list
             ]);
         }
 

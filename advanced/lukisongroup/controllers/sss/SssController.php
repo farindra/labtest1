@@ -57,7 +57,7 @@ class SssController extends Controller {
 
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('../index');
     }
 
     public function actionLogin()
@@ -82,4 +82,6 @@ class SssController extends Controller {
 
         return $this->goHome();
     }
+
+
 } 

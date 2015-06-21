@@ -27,6 +27,8 @@ class A1000 extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $touser;
+
     public static function tableName()
     {
         return 'a1000';
