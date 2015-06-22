@@ -15,19 +15,19 @@ class BeritaacaraAsset extends AssetBundle
     public $css = [
         //'assets_sss/css/fonts/linecons/css/linecons.css',
         //'assets_sss/css/fonts/fontawesome/css/font-awesome.min.css',
-        'assets_sss/css/xenon-core.css',
+        'assets_sss/css/xenon/xenon-core.css',
         //'assets_sss/css/xenon-forms.css',
         //'assets_sss/css/xenon-components.css',
         //'assets_sss/css/xenon-skins.css',
         //'assets_sss/css/custom.css',
-        'assets_sss/js/tagsinput2/bootstrap-tagsinput.css',
+        'assets_sss/js/xenon/tagsinput2/bootstrap-tagsinput.css',
         'assets_sss/js/angular.min.js',
-        'assets_sss/js/tagsinput2/app.css',
+        'assets_sss/js/xenon/tagsinput2/app.css',
     ];
     public $js = [
 
-        'assets_sss/js/typeahead.bundle.js',
-        'assets_sss/js/tagsinput2/bootstrap-tagsinput.js',
+        'assets_sss/js/xenon/typeahead.bundle.js',
+        'assets_sss/js/xenon/tagsinput2/bootstrap-tagsinput.js',
 
         //'assets_sss/js/bootstrap.min.js',
         //'assets_sss/js/TweenMax.min.js',

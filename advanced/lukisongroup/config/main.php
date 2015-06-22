@@ -11,7 +11,17 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'lukisongroup\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+			
+
+
+
+	]
+	
+	
+	
+	
+	,
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',

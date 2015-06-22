@@ -16,9 +16,7 @@ use kartik\typeahead\Typeahead;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= html::activeHiddenInput($model2, 'kd_berita') ?>
-
-    <?= html::activeHiddenInput($model, 'kd_berita') ?>
+    <?= html::activeHiddenInput($model, 'kd_berita',['value'=>date("Y.m.d-h:i:s.0000")]) ?>
 
     <?php /*echo $form->field($model, 'touser')->widget(Typeahead::classname(), [
             'dataset' => [['local' => $data,'limit' => 10]],
@@ -37,15 +35,17 @@ use kartik\typeahead\Typeahead;
 
     <?= html::activeHiddenInput($model, 'kd_dep') ?>
 
-    <?= $form->field($model, 'data_pict')->widget(FileInput::classname(), [
+    <?php /* $form->field($model, 'data_pict')->widget(FileInput::classname(), [
                                                     'options' => ['accept' => 'image/*','multiple' => true],
-                                                ]); ?>
+                                                ]); */ ?>
 
-    <?= $form->field($model, 'data_file')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'data_file')->widget(FileInput::classname(), [
+        'attribute' => 'attachment_1[]','options' => ['multiple' => true],
+    ])->label('Attachment'); ?>
 
-    <?= html::activeHiddenInput($model, 'status') ?>
+    <?= html::activeHiddenInput($model, 'status',['value'=>0]) ?>
 
-    <?= html::activeHiddenInput($model, 'created_at') ?>
+    <?= html::activeHiddenInput($model, 'created_at',['value'=>date("Y-m-d")]) ?>
 
     <?= html::activeHiddenInput($model, 'created_by') ?>
 
