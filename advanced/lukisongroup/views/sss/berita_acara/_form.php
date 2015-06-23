@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
+
 //use kartik\typeahead\TypeaheadBasic;
 use kartik\typeahead\Typeahead;
 
@@ -16,7 +17,7 @@ use kartik\typeahead\Typeahead;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= html::activeHiddenInput($model, 'kd_berita',['value'=>date("Y.m.d-h:i:s.0000")]) ?>
+    <?= html::activeHiddenInput($model, 'kd_berita',['value'=>date("Y-m-dh:i:s")]) ?>
 
     <?php /*echo $form->field($model, 'touser')->widget(Typeahead::classname(), [
             'dataset' => [['local' => $data,'limit' => 10]],
@@ -43,20 +44,29 @@ use kartik\typeahead\Typeahead;
         'attribute' => 'attachment_1[]','options' => ['multiple' => true],
     ])->label('Attachment'); ?>
 
-    <?= html::activeHiddenInput($model, 'status',['value'=>0]) ?>
+    <?= html::activeHiddenInput($model, 'status') ?>
 
     <?= html::activeHiddenInput($model, 'created_at',['value'=>date("Y-m-d")]) ?>
 
     <?= html::activeHiddenInput($model, 'created_by') ?>
 
+
+
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Save' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Send' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset',['class' => 'btn btn-warning']) ?>
         <?= Html::a(Html::button('Cancel',['class' => 'btn btn-danger']),'index') ?>
     </div>
 
     <?php ActiveForm::end(); ?>
 
-
+    <input id="input-700" name="kartik-input-700[]" type="file" multiple ">
+    <!--<script>
+        $("#input-700").fileinput({
+            uploadUrl: "http://localhost/file-upload-single/1", // server upload action
+            uploadAsync: true,
+            maxFileCount: 5
+        });
+    </script>-->
 
 </div>
