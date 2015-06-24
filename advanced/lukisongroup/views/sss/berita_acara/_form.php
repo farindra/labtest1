@@ -36,37 +36,35 @@ use kartik\typeahead\Typeahead;
 
     <?= html::activeHiddenInput($model, 'kd_dep') ?>
 
-    <?php /* $form->field($model, 'data_pict')->widget(FileInput::classname(), [
+    <?= html::activeHiddenInput($model, 'data_file',['type'=>'file','multiple'=>true]) ?>
+
+    <?php /* echo $form->field($model, 'data_pict')->widget(FileInput::classname(), [
                                                     'options' => ['accept' => 'image/*','multiple' => true],
                                                 ]); */ ?>
 
-    <?= $form->field($model, 'data_file')->widget(FileInput::classname(), [
-        'attribute' => 'attachment_1[]','options' => ['multiple' => true],
-    ])->label('Attachment'); ?>
+    <?php /*echo $form->field($model, 'data_file')->widget(FileInput::classname(), [
+        'attribute' => 'data_file[]','options' => ['multiple' => true],
+    ])->label('Attachment'); */?>
 
-    <?= html::activeHiddenInput($model, 'status') ?>
+    <?= html::activeHiddenInput($model, 'status',['value'=>'0']) ?>
+
+    <?= html::activeHiddenInput($model, 'time_at',['value'=>date("h:i:s")]) ?>
 
     <?= html::activeHiddenInput($model, 'created_at',['value'=>date("Y-m-d")]) ?>
 
-    <?= html::activeHiddenInput($model, 'created_by') ?>
+    <?= html::activeHiddenInput($model, 'created_by',['value'=>Yii::$app->user->identity->username]) ?>
 
 
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Send' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        </br>
+        <?= Html::submitButton($model->isNewRecord ? 'Send' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?><span></span>
         <?= Html::resetButton('Reset',['class' => 'btn btn-warning']) ?>
         <?= Html::a(Html::button('Cancel',['class' => 'btn btn-danger']),'index') ?>
     </div>
 
     <?php ActiveForm::end(); ?>
 
-    <input id="input-700" name="kartik-input-700[]" type="file" multiple ">
-    <!--<script>
-        $("#input-700").fileinput({
-            uploadUrl: "http://localhost/file-upload-single/1", // server upload action
-            uploadAsync: true,
-            maxFileCount: 5
-        });
-    </script>-->
+
 
 </div>

@@ -4,13 +4,14 @@ namespace lukisongroup\controllers\sss;
 
 use Yii;
 use lukisongroup\models\master\berita_acara\A1000;
-use lukisongroup\models\master\berita_acara\A1001;
+use lukisongroup\models\master\berita_acara\UploadForm;
 use lukisongroup\models\system\User;
 use lukisongroup\models\system\side_menu\M1000;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
+use yii\web\UploadedFile;
 
 
 class Berita_acaraController extends Controller
@@ -66,4 +67,18 @@ class Berita_acaraController extends Controller
         }
     }
 
+    public function actionUpload()
+    {
+        $model = new UploadForm();
+
+        if (Yii::$app->request->isPost) {
+            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+            if ($model->upload()) {
+                // file is uploaded successfully
+                return;
+            }
+        }
+
+        return $this->render('upload', ['model' => $model]);
+    }
 }

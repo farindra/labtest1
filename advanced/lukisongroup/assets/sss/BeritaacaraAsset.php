@@ -23,11 +23,13 @@ class BeritaacaraAsset extends AssetBundle
         'assets_sss/js/xenon/tagsinput2/bootstrap-tagsinput.css',
         'assets_sss/js/angular.min.js',
         'assets_sss/js/xenon/tagsinput2/app.css',
+        'assets_sss/bootstrap-fileinput/css/fileinput.min.css',
     ];
     public $js = [
 
         'assets_sss/js/xenon/typeahead.bundle.js',
         'assets_sss/js/xenon/tagsinput2/bootstrap-tagsinput.js',
+        'assets_sss/bootstrap-fileinput/js/fileinput.min.js',
 
         //'assets_sss/js/bootstrap.min.js',
         //'assets_sss/js/TweenMax.min.js',

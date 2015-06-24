@@ -19,7 +19,7 @@ class A1000Search extends A1000
     {
         return [
             [['id', 'status'], 'integer'],
-            [['kd_berita', 'judul', 'isi', 'kd_corp', 'kd_cab', 'kd_dep', 'data_pict', 'data_file', 'created_at', 'created_by', 'updated_at', 'data_all'], 'safe'],
+            [['kd_berita', 'judul', 'isi', 'kd_corp', 'kd_cab', 'kd_dep', 'data_pict', 'data_file', 'time_at', 'created_at', 'created_by', 'updated_at', 'data_all'], 'safe'],
         ];
     }
 
@@ -58,6 +58,7 @@ class A1000Search extends A1000
         $query->andFilterWhere([
             'id' => $this->id,
             'status' => $this->status,
+            'time_at' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);

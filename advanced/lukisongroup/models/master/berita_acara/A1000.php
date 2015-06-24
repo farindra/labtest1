@@ -3,6 +3,8 @@
 namespace lukisongroup\models\master\berita_acara;
 
 use Yii;
+use yii\web\UploadedFile;
+use yii\base\Model;
 
 /**
  * This is the model class for table "a1000".
@@ -28,6 +30,8 @@ class A1000 extends \yii\db\ActiveRecord
      * @inheritdoc
      */
     public $touser;
+    public $imageFiles;
+
 
     public static function tableName()
     {
@@ -51,10 +55,11 @@ class A1000 extends \yii\db\ActiveRecord
             [['kd_berita'], 'required'],
             [['isi', 'data_pict', 'data_file', 'data_all'], 'string'],
             [['status'], 'integer'],
-            [['created_at', 'updated_at'], 'safe'],
+            [['time_at','created_at', 'updated_at'], 'safe'],
             [['kd_berita', 'kd_corp', 'kd_cab', 'kd_dep'], 'string', 'max' => 20],
             [['judul'], 'string', 'max' => 200],
-            [['created_by'], 'string', 'max' => 100]
+            [['created_by'], 'string', 'max' => 100],
+            [['imageFiles'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg', 'maxFiles' => 4],
         ];
     }
 
@@ -74,6 +79,7 @@ class A1000 extends \yii\db\ActiveRecord
             'data_pict' => 'Data Pict',
             'data_file' => 'Data File',
             'status' => 'Status',
+            'time_at' => 'Time At',
             'created_at' => 'Created At',
             'created_by' => 'Created By',
             'updated_at' => 'Updated At',
@@ -88,5 +94,17 @@ class A1000 extends \yii\db\ActiveRecord
     public static function find()
     {
         return new A1000Query(get_called_class());
+    }
+
+    public function upload()
+    {
+        if ($this->validate()) {
+            foreach ($this->imageFiles as $file) {
+                $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
+            }
+            return true;
+        } else {
+            return false;
+        }
     }
 }
