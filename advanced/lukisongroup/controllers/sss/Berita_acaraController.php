@@ -4,7 +4,7 @@ namespace lukisongroup\controllers\sss;
 
 use Yii;
 use lukisongroup\models\master\berita_acara\A1000;
-use lukisongroup\models\master\berita_acara\UploadForm;
+use lukisongroup\models\master\berita_acara\A1001;
 use lukisongroup\models\system\User;
 use lukisongroup\models\system\side_menu\M1000;
 use yii\web\Controller;
@@ -12,7 +12,6 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
 use yii\web\UploadedFile;
-
 
 class Berita_acaraController extends Controller
 {
@@ -49,11 +48,37 @@ class Berita_acaraController extends Controller
         $side_menu=json_decode($side_menu,true);
         $model = new A1000();$model2 = new A1001;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id, 'kd_berita' => $model->kd_berita]);
+        if ($model->load(Yii::$app->request->post()) && $model->validate()){
+            $model->data_file=json_encode($_FILES['A1000']['name']['data_files']);$model->save();
+            echo 'Before : '. ($model->data_file).'</br>';
+        }
+
+         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+           // return $this->redirect(['view', 'id' => $model->id, 'kd_berita' => $model->kd_berita]);
+           //  echo 'After : '.print_r($model->data_file).'</br>'.print_r($_FILES);
+
+            if (Yii::$app->request->isPost) {
+              //  $model->data_file =  $_POST['A1000']['data_file'];
+                  $model->data_files = UploadedFile::getInstances($model, 'data_files');// var_dump($model->data_file);
+                if ($model->upload()) {
+                    // file is uploaded successfully
+                   //echo "ee";
+                }
+            }
+
+            //return $this->render('upload', ['model' => $model]);
+       /* if (!empty($_POST)) {
+            $model->data_file = $_POST['A1000']['data_file'];
+            $file = UploadedFile::getInstanceByName($model, 'data_file');
+            var_dump($file);
+
+            // You can then do the following
+            if ($model->save()) {
+               // $file->saveAs('assets_sss/uploads/ba/' . $file->baseName . '.' . $file->extension);
+            }
+            // its better if you relegate such a code to your model class*/
         } else {
-            return $this->render('new',['side_menu'=>$side_menu,'model' => $model,'model2' => $model2,'user_list' => $user_list
-            ]);
+            return $this->render('new',['side_menu'=>$side_menu,'model' => $model,'model2' => $model2,'user_list' => $user_list]);
         }
 
     }
@@ -67,18 +92,6 @@ class Berita_acaraController extends Controller
         }
     }
 
-    public function actionUpload()
-    {
-        $model = new UploadForm();
 
-        if (Yii::$app->request->isPost) {
-            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
-            if ($model->upload()) {
-                // file is uploaded successfully
-                return;
-            }
-        }
 
-        return $this->render('upload', ['model' => $model]);
-    }
 }

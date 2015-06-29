@@ -3,9 +3,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
-
-//use kartik\typeahead\TypeaheadBasic;
-use kartik\typeahead\Typeahead;
+//use kartik\typeahead\Typeahead;
+//use kartik\form\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\sss\A1000 */
@@ -15,15 +14,10 @@ use kartik\typeahead\Typeahead;
 
 <div class="a1000-form" ng-controller="MainCtrl">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= html::activeHiddenInput($model, 'kd_berita',['value'=>date("Y-m-dh:i:s")]) ?>
 
-    <?php /*echo $form->field($model, 'touser')->widget(Typeahead::classname(), [
-            'dataset' => [['local' => $data,'limit' => 10]],
-            'pluginOptions' => ['highlight' => true],
-            'options' => ['placeholder' => 'Masukkan Username'],
-        ]); */?>
     <?= $form->field($model, 'touser')->textInput(['maxlength' => true,'data-role'=>'tagsinput','ng-mode'=>'tags'])->label('To :') ?>
 
     <?= $form->field($model, 'judul')->textInput(['maxlength' => true]) ?>
@@ -36,15 +30,17 @@ use kartik\typeahead\Typeahead;
 
     <?= html::activeHiddenInput($model, 'kd_dep') ?>
 
-    <?= html::activeHiddenInput($model, 'data_file',['type'=>'file','multiple'=>true]) ?>
+    <?= $form->field($model, 'data_files[]')->fileInput(['multiple' => true])->label('') ?>
 
     <?php /* echo $form->field($model, 'data_pict')->widget(FileInput::classname(), [
                                                     'options' => ['accept' => 'image/*','multiple' => true],
                                                 ]); */ ?>
 
-    <?php /*echo $form->field($model, 'data_file')->widget(FileInput::classname(), [
-        'attribute' => 'data_file[]','options' => ['multiple' => true],
-    ])->label('Attachment'); */?>
+    <?php /*echo $form->field($model, 'data_file[]')->widget(FileInput::classname(),
+        [
+            //'' => 'data_file',
+            'options' => ['multiple' => true,'accept' => 'image/*'],
+        ])->label('Attachment');*/ ?>
 
     <?= html::activeHiddenInput($model, 'status',['value'=>'0']) ?>
 
