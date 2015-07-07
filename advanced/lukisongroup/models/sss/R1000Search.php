@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models\sss;
+namespace lukisongroup\models\sss;
 
 use Yii;
 use yii\base\Model;
@@ -18,8 +18,8 @@ class R1000Search extends R1000
     public function rules()
     {
         return [
-            [['Id', 'Val_1'], 'integer'],
-            [['Val_Nm', 'UPDT', 'Val_Json'], 'safe'],
+            [['ID', 'VAL_1'], 'integer'],
+            [['VAL_NM', 'UPDT', 'VAL_JSON'], 'safe'],
         ];
     }
 
@@ -56,13 +56,13 @@ class R1000Search extends R1000
         }
 
         $query->andFilterWhere([
-            'Id' => $this->Id,
-            'Val_1' => $this->Val_1,
+            'ID' => $this->ID,
+            'VAL_1' => $this->VAL_1,
             'UPDT' => $this->UPDT,
         ]);
 
-        $query->andFilterWhere(['like', 'Val_Nm', $this->Val_Nm])
-            ->andFilterWhere(['like', 'Val_Json', $this->Val_Json]);
+        $query->andFilterWhere(['like', 'VAL_NM', $this->VAL_NM])
+            ->andFilterWhere(['like', 'VAL_JSON', $this->VAL_JSON]);
 
         return $dataProvider;
     }

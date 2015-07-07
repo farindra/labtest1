@@ -1,13 +1,13 @@
 <?php
 /* @var $this yii\web\View */
-use lukisongroup\assets\SssAsset;
+//use lukisongroup\assets\SssAsset;
 use kartik\sidenav\SideNav;
 use yii\helpers\Html;
 use kartik\icons\Icon;
 
 $this->title = 'Berita Acara';
 $this->params['breadcrumbs'][] = $this->title;
-SssAsset::register($this);
+//SssAsset::register($this);
 
 ?>
 <!--<body ng-app="myApp" ng-controller="userCtrl">-->

@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use lukisongroup\assets\SssAsset;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\sss\R1000Search */
@@ -10,7 +10,7 @@ use lukisongroup\assets\SssAsset;
 
 $this->title = 'Foodtown Report';
 $this->params['breadcrumbs'][] = $this->title;
-SssAsset::register($this);
+
 ?>
 
 <div class="r1000-index">
@@ -19,7 +19,7 @@ SssAsset::register($this);
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create R1000', ['create'], ['class' => 'btn btn-success']) ?>
+        <?php //echo  Html::a('Create R1000', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -28,13 +28,13 @@ SssAsset::register($this);
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'Id',
-            'Val_Nm',
-            'Val_1',
+            'ID',
+            'VAL_NM',
+            'VAL_1',
             'UPDT',
-            'Val_Json:ntext',
+            'VAL_JSON:ntext',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

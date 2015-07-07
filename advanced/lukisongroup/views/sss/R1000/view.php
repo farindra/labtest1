@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model lukisongroup\models\sss\R1000 */
 
-$this->title = $model->Id;
+$this->title = $model->ID;
 $this->params['breadcrumbs'][] = ['label' => 'R1000s', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->Id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->Id], [
+        <?= Html::a('Update', ['update', 'ID' => $model->ID], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'ID' => $model->ID], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -28,11 +28,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'Id',
-            'Val_Nm',
-            'Val_1',
+            'ID',
+            'VAL_NM',
+            'VAL_1',
             'UPDT',
-            'Val_Json:ntext',
+            'VAL_JSON:ntext',
         ],
     ]) ?>
 

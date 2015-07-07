@@ -1,17 +1,19 @@
 <?php
-require_once ('config/main.php');
+
+/*require_once ('config/main.php');
 $db=new database();
 $db->db_connect();
-//$member_count=$db->member_count();
 $daily_sales=$db->daily_sales();
 $daily_trans=$db->daily_trans();
 $daily_member=$db->daily_member();
 $daily_trans_hour=$db->daily_trans_hour();
 $daily_trans_hour_7=$db->daily_trans_hour_7();
 $Trans_Years_All=$db->trans_years_all();
+$week_trans_day=$db->week_trans_day()
 $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Februari", 2012: 705, 2013: 417, 2014: 283 },{ month: "Maret", 2012: 856, 2013: 513, 2014: 361 },{month: "April", 2012: 1294, 2013: 614, 2014: 471 }]';
-
-
+*/
+//var_dump($daily_trans_hour);
+//exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +27,7 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
 	
 	<title>Lukison - Foodtown</title>
 
-    <?php include ('page/style-top.tpl');?>
+    <?php //include ('page/style-top.tpl');?>
 	
 	
 </head>
@@ -35,13 +37,13 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
 		<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
 		<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
 		<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
-        <?php include ('page/nav-main.tpl');?>
+        <?php// include ('page/nav-main.tpl');?>
 
         <div class="main-content">
 
             <!-- User Info, Notifications and Menu Bar -->
 
-            <?php include ('page/nav-top.tpl');?>
+            <?php //include ('page/nav-top.tpl');?>
 
 			<script type="text/javascript">
 				jQuery(document).ready(function($)
@@ -235,7 +237,7 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
                         { year: 7, 	europe: 0, americas: 0, africa: 0 },
 					];
 
-                    var serveruptime = <?php echo $db->week_trans_day();?>;
+                    var serveruptime = <?php echo $week_trans_day;?>;
 
 					$("#server-uptime-chart").dxChart({
 						dataSource: serveruptime,
@@ -294,7 +296,7 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
                         { year: 7, 	europe: 0, americas: 0, africa: 0 },
                     ];
 
-                    var serveruptime2 = <?php echo $db->week_trans_day_month();?>;
+                    var serveruptime2 = <?php echo $week_trans_day_month;?>;
 
                     $("#server-uptime-chart2").dxChart({
                         dataSource: serveruptime2,
@@ -408,7 +410,7 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
 						$("#pageviews-visitors-chart").data("dxChart").render();
 						$("#server-uptime-chart").data("dxChart").render();
                         $("#server-uptime-chart2").data("dxChart").render();
-						$("#realtime-network-stats").data("dxChart").render();
+						//$("#realtime-network-stats").data("dxChart").render();
 						
 						$('.first-month').data("dxSparkline").render();
 						$('.second-month').data("dxSparkline").render();
@@ -421,19 +423,19 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
 				{
 					var $ = jQuery,
 						i = 0;
-					
+
 					var chart_data = $('#realtime-network-stats').dxChart('instance').option('dataSource');
-					
+
 					var count = $('#realtime-network-stats').data('iCount');
-					
+
 					$('#realtime-network-stats').data('iCount', count + 1);
-					
+
 					chart_data.shift();
 					chart_data.push({id: count + 1, x1: between(min_max[0],min_max[1]), x2: between(min_max2[0],min_max2[1])});
-					
+
 					$('#realtime-network-stats').dxChart('instance').option('dataSource', chart_data);
 				}
-				
+
 				function networkRealtimeGaugeTick()
 				{
 					var nr_gauge = jQuery('#network-realtime-gauge').dxCircularGauge('instance');
@@ -468,22 +470,22 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
 			<div id="dasboard-item" class="row">
 				<div  class="col-sm-3">
 					
-					<div  class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="<?php echo $db->daily_sales(); ?>" data-suffix="" data-duration="2">
+					<div  class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="<?php echo $daily_sales; ?>" data-suffix="" data-duration="2">
 						<div class="xe-icon">
 							<i class="linecons-money"></i>
 						</div>
 						<div id="dasboard-item1" class="xe-label">
-							<?php echo '<strong class="num">'.$db->daily_sales().'</strong>'; ?>
+							<?php echo '<strong class="num">'.$daily_sales.'</strong>'; ?>
 							<span>Daily Sales (IDR)</span>
 						</div>
 					</div>
 
-                    <div class="xe-widget xe-counter xe-counter-info" data-count=".num" data-from="1000" data-to="<?php echo $db->daily_trans(); ?>" data-duration="4" data-easing="true">
+                    <div class="xe-widget xe-counter xe-counter-info" data-count=".num" data-from="1000" data-to="<?php echo $daily_trans; ?>" data-duration="4" data-easing="true">
                         <div class="xe-icon">
                             <i class="fa-credit-card"></i>
                         </div>
                         <div id="dasboard-item2" class="xe-label">
-                            <strong class="num"><?php echo $db->daily_trans(); ?></strong>
+                            <strong class="num"><?php echo $daily_trans; ?></strong>
                             <span>Daily Trans</span>
                         </div>
                     </div>
@@ -493,7 +495,7 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
 							<i class="linecons-user"></i>
 						</div>
 						<div id="dasboard-item3" class="xe-label">
-							<?php echo '<strong class="num">'.(double)$db->daily_member().' of '.(double)$db->daily_member_all().'</strong>'; ?>
+							<?php echo '<strong class="num">'.(double)$daily_member_all.' of '.(double)$daily_member_all.'</strong>'; ?>
 							<span>Daily Member</span>
 						</div>
 					</div>
@@ -621,7 +623,7 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
                                     </div>
 
                                     <table class="table table-condensed">
-                                        <?php echo $db->top5_member_month(); ?>
+                                        <?php echo $top5_member_month; ?>
                                     </table>
                                 </div>
                             </div>
@@ -634,7 +636,7 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
                                     </div>
 
                                     <table class="table table-condensed">
-                                        <?php echo $db->top5_tenant_month(); ?>
+                                        <?php echo $top5_tenant_month; ?>
                                     </table>
                                 </div>
                             </div>
@@ -647,11 +649,10 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
                                     </div>
 
                                     <table class="table table-condensed">
-                                        <?php echo $db->top5_member_new(); ?>
+                                        <?php echo $top5_member_new; ?>
                                     </table>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -723,12 +724,12 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
 	</div>
 
     <script type="text/javascript">
-                $(document).ready(function() {
+               /* $(document).ready(function() {
                        $(function() {
                                startRefresh();
                        });
                         function startRefresh() {
-                                setTimeout(startRefresh,3000);.fadeToggle();
+                                setTimeout(startRefresh,3000).fadeToggle();
                                 $('#dasboard-item1').load(location.href + ' #dasboard-item1').fadeToggle();
                                 $('#dasboard-item1').load(location.href + ' #dasboard-item1').fadeIn("slow");
                                // $('#dash-1').fadeIn("10000");//.load(location.href + ' #val-trans-daily').fadeIn("slow");
@@ -737,7 +738,7 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
                         }
 
                     function startRefresh2() {
-                        setTimeout(startRefresh,3000);.fadeToggle();
+                        setTimeout(startRefresh,3000).fadeToggle();
                         $('#dasboard-item2').load(location.href + ' #dasboard-item2').fadeToggle();
                         $('#dasboard-item2').load(location.href + ' #dasboard-item2').fadeIn("slow");
                         // $('#dash-1').fadeIn("10000");//.load(location.href + ' #val-trans-daily').fadeIn("slow");
@@ -745,11 +746,11 @@ $someJSON='[{ month: "Januari", 2012: 546, 2013: 332, 2014: 227 },{ month: "Febr
                         //$('#val-member').reload;
                     }
 
-                });
+                });*/
     </script>
 
 
-    <?php include('page/style-bottom.tpl');?>
+    <?php //nclude('page/style-bottom.tpl');?>
 
 
 </body>

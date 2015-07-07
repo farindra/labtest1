@@ -7,11 +7,11 @@ use Yii;
 /**
  * This is the model class for table "r1000".
  *
- * @property integer $Id
- * @property string $Val_Nm
- * @property integer $Val_1
+ * @property integer $ID
+ * @property string $VAL_NM
+ * @property integer $VAL_1
  * @property string $UPDT
- * @property string $Val_Json
+ * @property string $VAL_JSON
  */
 class R1000 extends \yii\db\ActiveRecord
 {
@@ -37,10 +37,10 @@ class R1000 extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Val_1'], 'integer'],
+            [['VAL_1'], 'integer'],
             [['UPDT'], 'safe'],
-            [['Val_Json'], 'string'],
-            [['Val_Nm'], 'string', 'max' => 100]
+            [['VAL_JSON'], 'string'],
+            [['VAL_NM'], 'string', 'max' => 100]
         ];
     }
 
@@ -50,11 +50,16 @@ class R1000 extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Id' => 'tabel reporting',
-            'Val_Nm' => 'Val  Nm',
-            'Val_1' => 'Val 1',
+            'ID' => 'tabel reporting',
+            'VAL_NM' => 'Val  Nm',
+            'VAL_1' => 'Val 1',
             'UPDT' => 'Updt',
-            'Val_Json' => 'Val  Json',
+            'VAL_JSON' => 'Val  Json',
         ];
+    }
+
+    public static function find()
+    {
+        return new R1000Query(get_called_class());
     }
 }

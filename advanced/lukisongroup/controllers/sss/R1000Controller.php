@@ -4,7 +4,7 @@ namespace lukisongroup\controllers\sss;
 
 use Yii;
 use lukisongroup\models\sss\R1000;
-use app\models\sss\R1000Search;
+use lukisongroup\models\sss\R1000Search;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -63,7 +63,7 @@ class R1000Controller extends Controller
         $model = new R1000();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->Id]);
+            return $this->redirect(['view', 'ID' => $model->ID]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -82,7 +82,7 @@ class R1000Controller extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->Id]);
+            return $this->redirect(['view', 'ID' => $model->ID]);
         } else {
             return $this->render('update', [
                 'model' => $model,
