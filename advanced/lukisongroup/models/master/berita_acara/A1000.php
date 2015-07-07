@@ -100,7 +100,7 @@ class A1000 extends \yii\db\ActiveRecord
     {
         if ($this->validate()) {
             foreach ($this->data_files as $file) {
-                $file->saveAs('assets_sss/uploads/ba/' . $file->baseName . '.' . $file->extension);
+                $file->saveAs(yii::$app->params['uploadPathBa']. $file->baseName . '.' . $file->extension);
             }
             return true;
         } else {

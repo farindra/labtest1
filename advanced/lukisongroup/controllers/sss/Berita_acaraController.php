@@ -31,7 +31,7 @@ class Berita_acaraController extends Controller
     public function actionIndex()
     {
         //set menu side menu index
-        $side_menu=M1000:: find()->findMenu('sss_berita_acara')->one()->jval;
+        $side_menu=M1000::find()->findMenu('sss_berita_acara')->one()->jval;
         $side_menu=json_decode($side_menu,true);
 
         return $this->render('index',['side_menu'=>$side_menu]);
@@ -50,7 +50,7 @@ class Berita_acaraController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()){
             $model->data_file=json_encode($_FILES['A1000']['name']['data_files']);$model->save();
-            echo 'Before : '. ($model->data_file).'</br>';
+            echo 'Before : '. ($model->data_file).'</br>';echo json_encode($_POST);
         }
 
          if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -92,6 +92,21 @@ class Berita_acaraController extends Controller
         }
     }
 
+    public function actionUpload() {
+        $model = new A1000();
+        if (Yii::$app->request->isPost) {
+            echo 'Before : '. ($model->data_file).'</br>';echo json_encode($_POST);
+            //  $model->data_file =  $_POST['A1000']['data_file'];
+            //$model->data_files = UploadedFile::getInstances($model, 'data_files');// var_dump($model->data_file);
+           // if ($model->upload()) {
+                // file is uploaded successfully
+                //echo "ee";
+            //}
+            $file = \yii\web\UploadedFile::getInstanceByName('data_files');
+            $file->saveAs('/your/directory/'.$file->name);
+        }
+        return $this->render('upload', ['model' => $model]);
+    }
 
 
 }

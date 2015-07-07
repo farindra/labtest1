@@ -76,13 +76,22 @@ BeritaacaraAsset:: register($this);
                 }
             });
 
-         //  $('#a1000-data_file').fileinput({
-                //uploadUrl: "", // server upload action
-         //       uploadAsync: true,
-         //       maxFileCount: 10
-         //   });
+            $('#a1000-data_files').fileinput({
+                uploadUrl: 'upload', // server upload action
+                uploadAsync: true,
+                showUpload: false,
+                showRemove: false,
+                //allowedFileExtensions : ['jpg', 'png','gif'],
+                maxFileCount: 10
+            });
+
         });
     </script>
+
+    <script type="text/javascript">
+
+    </script>
+
 </div>
 
 

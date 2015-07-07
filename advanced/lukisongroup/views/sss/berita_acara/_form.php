@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kartik\file\FileInput;
+//use kartik\file\FileInput;
 //use kartik\typeahead\Typeahead;
 //use kartik\form\ActiveForm;
 
@@ -30,7 +30,8 @@ use kartik\file\FileInput;
 
     <?= html::activeHiddenInput($model, 'kd_dep') ?>
 
-    <?= $form->field($model, 'data_files[]')->fileInput(['multiple' => true])->label('') ?>
+
+    <?= $form->field($model, 'data_files[]')->fileInput(['class'=>'file-loading','multiple' => true])->label('') ?>
 
     <?php /* echo $form->field($model, 'data_pict')->widget(FileInput::classname(), [
                                                     'options' => ['accept' => 'image/*','multiple' => true],
